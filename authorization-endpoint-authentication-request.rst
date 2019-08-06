@@ -123,8 +123,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 |    nte          |                 |
 |                 |                 |    chiederà il  |                 |
 |                 |                 |    consenso al  |                 |
-|                 |                 |    trasferiment |                 |
-|                 |                 |                 |                 |
+|                 |                 |    trasferimento|                 |
 |                 |                 |    degli        |                 |
 |                 |                 |    attributi    |                 |
 |                 |                 |    (valore      |                 |
@@ -138,25 +137,23 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 |    credenziali  |                 |
 |                 |                 |    di           |                 |
 |                 |                 |    autenticazio |                 |
-|                 |                 | ne              |                 |
+|                 |                 |    ne           |                 |
 |                 |                 |    all’utente e |                 |
 |                 |                 |    successivame |                 |
-|                 |                 | nte             |                 |
+|                 |                 |    nte          |                 |
 |                 |                 |    chiederà il  |                 |
 |                 |                 |    consenso al  |                 |
-|                 |                 |    trasferiment |                 |
-|                 |                 | o               |                 |
+|                 |                 |    trasferimento|                 |
 |                 |                 |    degli        |                 |
 |                 |                 |    attributi    |                 |
 |                 |                 |    (valore da   |                 |
 |                 |                 |    utilizzarsi  |                 |
-|                 |                 |    limitatament |                 |
-|                 |                 | e               |                 |
+|                 |                 |    limitatamente|                 |
 |                 |                 |    ai casi in   |                 |
 |                 |                 |    cui si vuole |                 |
 |                 |                 |    forzare la   |                 |
 |                 |                 |    riautenticaz |                 |
-|                 |                 | ione)           |                 |
+|                 |                 |    ione)        |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **redirect_uri* | URL dove l’OP   | Deve essere uno | SI              |
 | *               | reindirizzerà   | degli URL       |                 |
