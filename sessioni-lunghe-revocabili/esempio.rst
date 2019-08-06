@@ -118,58 +118,45 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                 | di              |                 |                 |
 |                 | autenticazione. |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Prompt**      | Definisce se    | -  **consent**: | SI              |
-|                 | l’OP deve       |    l’OP         |                 |
-|                 | occuparsi di    |    chiederà le  |                 |
-|                 | eseguire una    |    credenziali  |                 |
-|                 | richiesta di    |    di           |                 |
-|                 | autenticazione  |    autenticazio |                 |
-|                 | all’utente o    | ne              |                 |
-|                 | meno.           |    all’utente   |                 |
-|                 |                 |    (ma solo se  |                 |
-|                 |                 |    non è già    |                 |
-|                 |                 |    attiva una   |                 |
-|                 |                 |    sessione di  |                 |
-|                 |                 |    Single       |                 |
-|                 |                 |    Sign-On) e   |                 |
-|                 |                 |    successivame |                 |
-|                 |                 | nte             |                 |
-|                 |                 |    chiederà il  |                 |
-|                 |                 |    consenso al  |                 |
-|                 |                 |    trasferiment |                 |
-|                 |                 | o               |                 |
-|                 |                 |    degli        |                 |
-|                 |                 |    attributi    |                 |
-|                 |                 |    (valore      |                 |
-|                 |                 |    consigliato) |                 |
-|                 |                 |                 |                 |
-|                 |                 | -  **consent    |                 |
-|                 |                 |    login:**     |                 |
-|                 |                 |    l’OP         |                 |
-|                 |                 |    chiederà     |                 |
-|                 |                 |    sempre le    |                 |
-|                 |                 |    credenziali  |                 |
-|                 |                 |    di           |                 |
-|                 |                 |    autenticazio |                 |
-|                 |                 | ne              |                 |
-|                 |                 |    all’utente e |                 |
-|                 |                 |    successivame |                 |
-|                 |                 | nte             |                 |
-|                 |                 |    chiederà il  |                 |
-|                 |                 |    consenso al  |                 |
-|                 |                 |    trasferiment |                 |
-|                 |                 | o               |                 |
-|                 |                 |    degli        |                 |
-|                 |                 |    attributi    |                 |
-|                 |                 |    (valore da   |                 |
-|                 |                 |    utilizzarsi  |                 |
-|                 |                 |    limitatament |                 |
+| **Prompt**      | Definisce se    | **consent**:    | SI              |
+|                 | l’OP deve       | l’OP chiederà   |                 |
+|                 | occuparsi di    | le credenziali  |                 |
+|                 | eseguire una    | di              |                 |
+|                 | richiesta di    | autenticazione  |                 |
+|                 | autenticazione  | all’utente (ma  |                 |
+|                 | all’utente o    | solo se non è   |                 |
+|                 | meno.           | già attiva una  |                 |
+|                 |                 | sessione di     |                 |
+|                 |                 | Single Sign-On) |                 |
 |                 |                 | e               |                 |
-|                 |                 |    ai casi in   |                 |
-|                 |                 |    cui si vuole |                 |
-|                 |                 |    forzare la   |                 |
-|                 |                 |    riautenticaz |                 |
-|                 |                 | ione)           |                 |
+|                 |                 | successivamente |                 |
+|                 |                 | chiederà il     |                 |
+|                 |                 | consenso al     |                 |
+|                 |                 | trasferimento   |                 |
+|                 |                 | degli attributi |                 |
+|                 |                 | (valore         |                 |
+|                 |                 | consigliato)    |                 |
+|                 |                 |                 |                 |
+|                 |                 | **consent       |                 |
+|                 |                 | login:** l’OP   |                 |
+|                 |                 | chiederà sempre |                 |
+|                 |                 | le credenziali  |                 |
+|                 |                 | di              |                 |
+|                 |                 | autenticazione  |                 |
+|                 |                 | all’utente e    |                 |
+|                 |                 | successivamente |                 |
+|                 |                 | chiederà il     |                 |
+|                 |                 | consenso al     |                 |
+|                 |                 | trasferimento   |                 |
+|                 |                 | degli attributi |                 |
+|                 |                 | (valore da      |                 |
+|                 |                 | utilizzarsi     |                 |
+|                 |                 | limitatamente   |                 |
+|                 |                 | ai casi in cui  |                 |
+|                 |                 | si vuole        |                 |
+|                 |                 | forzare la      |                 |
+|                 |                 | riautenticazion |                 |
+|                 |                 | e)              |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **redirect_uri* | URL dove l’OP   | Deve essere uno | SI              |
 | *               | reindirizzerà   | degli URL       |                 |
@@ -178,50 +165,37 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                 | processo di     | (v. paragrafo   |                 |
 |                 | autenticazione. | 3.2).           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **response_type | Il tipo di      | -  **code**     | SI              |
+| **response_type | Il tipo di      | **code**        | SI              |
 | **              | credenziali che |                 |                 |
 |                 | deve restituire |                 |                 |
 |                 | l’OP.           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Scope**       | Lista degli     | -  **openid**   | SI              |
-|                 | scope           |    (obbligatori |                 |
-|                 | richiesti.      | o)              |                 |
-|                 |                 |                 |                 |
-|                 |                 | -  **offline_ac |                 |
-|                 |                 | cess**:         |                 |
-|                 |                 |    se           |                 |
-|                 |                 |    specificato, |                 |
-|                 |                 |    l’OP         |                 |
-|                 |                 |    rilascerà    |                 |
-|                 |                 |    oltre        |                 |
-|                 |                 |    all’\ *acces |                 |
-|                 |                 | s               |                 |
-|                 |                 |    token* anche |                 |
-|                 |                 |    un *refresh  |                 |
-|                 |                 |    token*       |                 |
-|                 |                 |    necessario   |                 |
-|                 |                 |    per          |                 |
-|                 |                 |    instaurare   |                 |
-|                 |                 |    sessioni     |                 |
-|                 |                 |    lunghe       |                 |
-|                 |                 |    revocabili.  |                 |
-|                 |                 |    L’uso di     |                 |
-|                 |                 |    questo       |                 |
-|                 |                 |    valore è     |                 |
-|                 |                 |    consentito   |                 |
-|                 |                 |    solo se il   |                 |
-|                 |                 |    client è     |                 |
-|                 |                 |    un’applicazi |                 |
-|                 |                 | one             |                 |
-|                 |                 |    per          |                 |
-|                 |                 |    dispositivi  |                 |
-|                 |                 |    mobili che   |                 |
-|                 |                 |    intenda      |                 |
-|                 |                 |    offrire      |                 |
-|                 |                 |    all’utente   |                 |
-|                 |                 |    una sessione |                 |
-|                 |                 |    lunga        |                 |
-|                 |                 |    revocabile.  |                 |
+| **Scope**       | Lista degli     | **openid**      | SI              |
+|                 | scope           | (obbligatorio)  |                 |
+|                 | richiesti.      |                 |                 |
+|                 |                 | **offline_acces |                 |
+|                 |                 | s**:            |                 |
+|                 |                 | se specificato, |                 |
+|                 |                 | l’OP rilascerà  |                 |
+|                 |                 | oltre           |                 |
+|                 |                 | all’\ *access   |                 |
+|                 |                 | token* anche un |                 |
+|                 |                 | *refresh token* |                 |
+|                 |                 | necessario per  |                 |
+|                 |                 | instaurare      |                 |
+|                 |                 | sessioni lunghe |                 |
+|                 |                 | revocabili.     |                 |
+|                 |                 | L’uso di questo |                 |
+|                 |                 | valore è        |                 |
+|                 |                 | consentito solo |                 |
+|                 |                 | se il client è  |                 |
+|                 |                 | un’applicazione |                 |
+|                 |                 | per dispositivi |                 |
+|                 |                 | mobili che      |                 |
+|                 |                 | intenda offrire |                 |
+|                 |                 | all’utente una  |                 |
+|                 |                 | sessione lunga  |                 |
+|                 |                 | revocabile.     |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **Claims**      | Lista dei       | v. paragrafo    | SI              |
 |                 | claims          | 5.1             |                 |

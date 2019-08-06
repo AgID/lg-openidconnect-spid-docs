@@ -41,9 +41,9 @@ che consente di identificare il RP che esegue la richiesta.
 |                       | Token Endpoint.       | parametro             |
 |                       |                       | **client_id**.        |
 +-----------------------+-----------------------+-----------------------+
-| **client_assertion_ty |                       | -  **urn:ietf:params: |
-| pe**                  |                       | oauth:client-assertio |
-|                       |                       | n-type:jwt-bearer**   |
+| **client_assertion_ty |                       | **urn:ietf:params:oau |
+| pe**                  |                       | th:client-assertion-t |
+|                       |                       | ype:jwt-bearer**      |
 +-----------------------+-----------------------+-----------------------+
 | **client_id**         | URI che identifica    | L’OP deve verificare  |
 |                       | univocamente il RP    | che il client_id sia  |

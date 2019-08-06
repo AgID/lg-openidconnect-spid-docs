@@ -111,11 +111,10 @@ Request
 | ion_type**      |                 | il seguente     |                 |
 |                 |                 | valore:         |                 |
 |                 |                 |                 |                 |
-|                 |                 | -  **urn:ietf:p |                 |
-|                 |                 | arams:oauth:cli |                 |
-|                 |                 | ent-assertion-t |                 |
-|                 |                 | ype:jwt-bearer* |                 |
-|                 |                 | *               |                 |
+|                 |                 | **urn:ietf:para |                 |
+|                 |                 | ms:oauth:client |                 |
+|                 |                 | -assertion-type |                 |
+|                 |                 | :jwt-bearer**   |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **Code**        | Codice di       |                 | Solo se         |
 |                 | autorizzazione  |                 | **grant_type**  |
@@ -135,11 +134,11 @@ Request
 |                 | presentata dal  | seguenti        |                 |
 |                 | Client per la   | valori:         |                 |
 |                 | richiesta       |                 |                 |
-|                 | corrente.       | -  **authorizat |                 |
-|                 |                 | ion_code**      |                 |
+|                 | corrente.       | **authorization |                 |
+|                 |                 | _code**         |                 |
 |                 |                 |                 |                 |
-|                 |                 | -  **refresh_to |                 |
-|                 |                 | ken**           |                 |
+|                 |                 | **refresh_token |                 |
+|                 |                 | **              |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **refresh_token |                 |                 | Solo se         |
 | **              |                 |                 | **grant_type**  |
