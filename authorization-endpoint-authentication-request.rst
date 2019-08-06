@@ -11,7 +11,7 @@ definite dall’Agenzia per l’Italia Digitale.
 **Esempio (chiamata HTTP):**
 
 +-----------------------------------------------------------------------+
-| https://op.spid.agid.gov.it/auth?request=eyJhbGciOiJSUzI1NiIs         |
+| https://op.spid.agid.gov.it/auth?request=eyJhbGciOiJSUzI1NiIsImtpZCfr |
 | ImtpZCI6ImsyYmRjIn0.ew0KICJpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJod |
 | HRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQogInJlc3BvbnNlX3R5cGUiOiAiY29kZS |
 | BpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQzIiwNCiAicmVkaXJlY3R |
