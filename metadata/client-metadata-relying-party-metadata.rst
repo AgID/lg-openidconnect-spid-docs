@@ -108,12 +108,9 @@ con alcuni campi in aggiunta.
 |                                   | specificato in più lingue         |
 |                                   | apponendo al nome dell’elemento   |
 |                                   | il suffisso "#" seguito dal       |
-|                                   | codice                            |
-|                                   | `RFC5646 <https://tools.ietf.org/ |
-|                                   | html/rfc5646>`__.                 |
-|                                   | Un nome di default senza          |
-|                                   | indicazione della lingua è sempre |
-|                                   | presente.                         |
+|                                   | codice RFC5646. Un nome di        |
+|                                   | default senza indicazione della   |
+|                                   | lingua è sempre presente.         |
 +-----------------------------------+-----------------------------------+
 | **response_types**                | Array dei valori di response_type |
 |                                   | previsti da OAuth 2.0 che il      |

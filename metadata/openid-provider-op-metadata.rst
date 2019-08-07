@@ -153,35 +153,29 @@ con alcuni campi in aggiunta.
 
 **Esempio di risorsa jwks_uri:**
 
-+-----------------------------------+-----------------------------------+
-| | {"keys": [                      |                                   |
-| | {                               |                                   |
-| | "kty": "EC",                    |                                   |
-| | "kid": "sig-ec256-0",           |                                   |
-| | "use": "sig",                   |                                   |
-| | "crv": "P-256",                 |                                   |
-| | "x":                            |                                   |
-|   "2jM2df3IjB9VYQ0yz373-6EEot_1TB |                                   |
-| uTRaRYafMi5K0",                   |                                   |
-| | "y":                            |                                   |
-|   "h6Zlz6XReK0L-iu4ZgxlozJEXgTGUF |                                   |
-| uuDl7o8b_8JnM"                    |                                   |
-| | },                              |                                   |
-| | {                               |                                   |
-| | "kty": "EC",                    |                                   |
-| | "kid": "enc-ec256-0",           |                                   |
-| | "use": "enc",                   |                                   |
-| | "crv": "P-256",                 |                                   |
-| | "x":                            |                                   |
-|   "QI31cvWP4GwnWIi-Z0IYHauQ4nPCk8 |                                   |
-| Vf1BHoPazGqEc",                   |                                   |
-| | "y":                            |                                   |
-|   "DBwf8t9-abpXGtTDlZ8njjxAb33kOM |                                   |
-| rOqiGsd9oRxr0"                    |                                   |
-| | }                               |                                   |
-| | ]                               |                                   |
-|                                   |                                   |
-| }                                 |                                   |
++-------------------------------------------------------+
+| | {"keys": [                                          |
+| | {                                                   |
+| | "kty": "EC",                                        |
+| | "kid": "sig-ec256-0",                               |
+| | "use": "sig",                                       |
+| | "crv": "P-256",                                     |
+| | "x": "2jM2df3IjB9VYQ0yz373-6EEot_1TBuTRaRYafMi5K0", |
+| | "y": "h6Zlz6XReK0L-iu4ZgxlozJEXgTGUFuuDl7o8b_8JnM"  |
+| | },                                                  |
+| | {                                                   |
+| | "kty": "EC",                                        |
+| | "kid": "enc-ec256-0",                               |
+| | "use": "enc",                                       |
+| | "crv": "P-256",                                     |
+| | "x": "QI31cvWP4GwnWIi-Z0IYHauQ4nPCk8Vf1BHoPazGqEc", |
+| | "y": "DBwf8t9-abpXGtTDlZ8njjxAb33kOMrOqiGsd9oRxr0"  |
+| | }                                                   |
+| | ]                                                   |
+|                                                       |
+| }                                                     |
++-------------------------------------------------------+
+
 +-----------------------------------+-----------------------------------+
 | **Elemento**                      | **Descrizione**                   |
 +-----------------------------------+-----------------------------------+
@@ -246,23 +240,17 @@ con alcuni campi in aggiunta.
 |                                   | essere specificato in più lingue  |
 |                                   | apponendo al nome dell’elemento   |
 |                                   | il suffisso "#" seguito dal       |
-|                                   | codice                            |
-|                                   | `RFC5646 <https://tools.ietf.org/ |
-|                                   | html/rfc5646>`__.                 |
-|                                   | Un nome di default senza          |
-|                                   | indicazione della lingua è sempre |
-|                                   | presente.                         |
+|                                   | codice RFC5646. Un nome di        |
+|                                   | default senza indicazione della   |
+|                                   | lingua è sempre presente.         |
 +-----------------------------------+-----------------------------------+
 | **provider_url**                  | URL dell’OpenID Provider. Può     |
 |                                   | essere specificato in più lingue  |
 |                                   | apponendo al nome dell’elemento   |
 |                                   | il suffisso "#" seguito dal       |
-|                                   | codice                            |
-|                                   | `RFC5646 <https://tools.ietf.org/ |
-|                                   | html/rfc5646>`__.                 |
-|                                   | Un valore di default senza        |
-|                                   | indicazione della lingua è sempre |
-|                                   | presente.                         |
+|                                   | codice RFC5646. Un valore di      |
+|                                   | default senza indicazione della   |
+|                                   | lingua è sempre presente.         |
 +-----------------------------------+-----------------------------------+
 | **request_object_signing_alg_valu | Array contenente gli algoritmi di |
 | es_supported**                    | firma supportati per il JWS dei   |

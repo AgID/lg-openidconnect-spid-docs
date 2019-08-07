@@ -9,12 +9,12 @@ aggiungendo nella post i parametri in risposta.
 
 **Riferimenti:**
 
-+----------------------------------------------------------------------------+
-| https://tools.ietf.org/html/rfc6749#section-4.1.2                          |
-|                                                                            |
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValidation |
-|                                                                            |
-+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+| https://tools.ietf.org/html/rfc6749#section-4.1.2                     |
+|                                                                       |
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequestValid |
+| ation                                                                 |
++-----------------------------------------------------------------------+
 
 .. toctree::
   :maxdepth: 3

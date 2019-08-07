@@ -23,14 +23,11 @@ isolamento dall’applicazione chiamante. A tal fine si consiglia l’uso
 della libreria AppAuth e si rinvia alle indicazioni contenute nelle
 Linee Guida User Experience SPID.
 
-Si rimanda a `RFC8252 <https://tools.ietf.org/html/rfc8252>`__ per
-ulteriori specifiche tecniche e raccomandazioni di sicurezza da
-applicarsi in caso di applicazioni mobili.
+Si rimanda a RFC8252 per ulteriori specifiche tecniche e raccomandazioni
+di sicurezza da applicarsi in caso di applicazioni mobili.
 
 **Riferimenti**
 
-+-----------------------------------------------------------------------+
-| `RFC8252: OAuth 2.0 for Native Apps                                   |
-| (https://tools.ietf.org/html/rfc8252) <https://tools.ietf.org/html/rf |
-| c8252>`__                                                             |
-+-----------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+| RFC8252: OAuth 2.0 for Native Apps (https://tools.ietf.org/html/rfc8252) |
++--------------------------------------------------------------------------+
