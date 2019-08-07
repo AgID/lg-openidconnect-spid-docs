@@ -243,12 +243,10 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | intellegibile   |                 |                 |
 |                 | ad altri.       |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **response_mode | http://openid.n | form_post       | SI              |
-| **              | et/specs/oauth- |                 |                 |
-|                 | v2-form-post-re |                 |                 |
-|                 | sponse-mode-1_0 |                 |                 |
-|                 | .html#FormPostR |                 |                 |
-|                 | esponseMode     |                 |                 |
+|**response_mode**| Definisce la    | form_post       | SI              |
+|                 | modalità di     |                 |                 |
+|                 | risposta del    |                 |                 |
+|                 | Form*           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **ui_locales**  | Lingue          | Lista di codici | NO              |
 |                 | preferibili per | RFC5646         |                 |
@@ -265,20 +263,19 @@ definite dall’Agenzia per l’Italia Digitale.
 
 **Riferimenti:**
 
-+--------------------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
-|                                                                                |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
-| 1.1                                                                            |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
-|                                                                                |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
-|                                                                                |
-|                                                                                |
-| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
-+--------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest                       |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1               |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1         |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4         |
+|                                                                                        |
+| *http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests                       |
+|                                                                                        |
+| https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html#FormPostesponseMode |
++----------------------------------------------------------------------------------------+
 
 .. toctree::
   :maxdepth: 3
