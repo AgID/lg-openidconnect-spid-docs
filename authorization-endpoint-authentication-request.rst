@@ -69,19 +69,22 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | RP come da      | nel Registro    |                 |
 |                 | Registro SPID.  | SPID.           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Un challenge    | V. paragrafo    | SI              |
-| e**             | per PKCE da     | 6.1             |                 |
-|                 | riportare anche | "Generazione    |                 |
-|                 | nella           | del             |                 |
-|                 | successiva      | code_challenge  |                 |
-|                 | richiesta al    | per PKCE"       |                 |
-|                 | Token endpoint. |                 |                 |
++------------------+-----------------+-----------------+----------------+
+|**code_challenge**| Un challenge    | V. paragrafo    | SI             |
+|                  | per PKCE da     | 6.1             |                |
+|                  | riportare anche | "Generazione    |                |
+|                  | nella           | del             |                |
+|                  | successiva      | code_challenge  |                |
+|                  | richiesta al    | per PKCE"       |                |
+|                  | Token endpoint. |                 |                |
++------------------+-----------------+-----------------+----------------+
++--------------------------+-----------------+-----------------+--------+
+| **code_challenge_method**| Metodo di       | È obbligatorio  | SI     |
+|                          | costruzione del | specificare il  |        |
+|                          | challenge PKCE. | valore **S256** |        |
++--------------------------+-----------------+-----------------+--------+
 +-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Metodo di       | È obbligatorio  | SI              |
-| e_method**      | costruzione del | specificare il  |                 |
-|                 | challenge PKCE. | valore **S256** |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Nonce**       | Valore che      | Stringa di      | SI              |
+| **nonce**       | Valore che      | Stringa di      | SI              |
 |                 | serve ad        | almeno 32       |                 |
 |                 | evitare         | caratteri       |                 |
 |                 | attacchi Reply, | alfanumerici.   |                 |
@@ -104,7 +107,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | di              |                 |                 |
 |                 | autenticazione. |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Prompt**      | Definisce se    | **consent**:    | SI              |
+| **prompt**      | Definisce se    | **consent**:    | SI              |
 |                 | l’OP deve       | l’OP chiederà   |                 |
 |                 | occuparsi di    | le credenziali  |                 |
 |                 | eseguire una    | di              |                 |
@@ -144,15 +147,15 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 | riautenticazion |                 |
 |                 |                 | e)              |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **redirect_uri* | URL dove l’OP   | Deve essere uno | SI              |
-| *               | reindirizzerà   | degli URL       |                 |
+|**redirect_uri** | URL dove l’OP   | Deve essere uno | SI              |
+|                 | reindirizzerà   | degli URL       |                 |
 |                 | l’utente al     | indicati nel    |                 |
 |                 | termine del     | client metadata |                 |
 |                 | processo di     | (v. paragrafo   |                 |
 |                 | autenticazione. | 3.2).           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **response_type | Il tipo di      | **code**        | SI              |
-| **              | credenziali che |                 |                 |
+|**response_type**| Il tipo di      | **code**        | SI              |
+|                 | credenziali che |                 |                 |
 |                 | deve restituire |                 |                 |
 |                 | l’OP.           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
