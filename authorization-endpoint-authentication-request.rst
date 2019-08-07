@@ -188,7 +188,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | della classe di |                 |                 |
 |                 | contesto        | https://www.spi |                 |
 |                 | dell’autenticazi| d.gov.it/SpidL2 |                 |
-|                 | one             |                 |                 |
+|                 |one              |                 |                 |
 |                 | richiesta.      | https://www.spi |                 |
 |                 | Stringa         | d.gov.it/SpidL3 |                 |
 |                 | separata da uno |                 |                 |
