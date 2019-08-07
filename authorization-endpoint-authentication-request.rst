@@ -182,6 +182,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 | all’utente una  |                 |
 |                 |                 | sessione lunga  |                 |
 |                 |                 | revocabile.     |                 |
++-----------------+-----------------+-----------------+-----------------+
 +-----------------+-----------------+-------------------------------+---+
 | **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1 |SI |
 |                 | riferimento     |                               |   |
@@ -207,6 +208,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | visualizzati in |                               |   |
 |                 | ordine di       |                               |   |
 |                 | preferenza.     |                               |   |
++-----------------+-----------------+-------------------------------+---+
 +-----------------+-----------------+-----------------+-----------------+
 | **Claims**      | Lista dei       | v. paragrafo    | SI              |
 |                 | claims          | 5.1             |                 |
