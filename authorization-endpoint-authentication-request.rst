@@ -272,7 +272,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                                                                                        |
 | http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4         |
 |                                                                                        |
-| *http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests                       |
+| *http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests                      |
 |                                                                                        |
 | https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html#FormPostesponseMode |
 +----------------------------------------------------------------------------------------+
