@@ -7,174 +7,106 @@ con alcuni campi in aggiunta.
 
 **Esempio:**
 
-+--------------------------------------------------------------------------+
-| {                                                                        |
-|                                                                          |
-| "issuer": "https://op.fornitore_identita.it",                            |
-|                                                                          |
-| "authorization_endpoint": "https://op.fornitore_identita.it/auth",       |
-|                                                                          |
-| "token_endpoint": "https://op.fornitore_identita.it/token",              |
-|                                                                          |
-| "userinfo_endpoint": "https://op.fornitore_identita.it/userinfo",        |
-|                                                                          |
-| "introspection_endpoint": "https://op.fornitore_identita.it/introspect", |
-|                                                                          |
-| "revocation_endpoint": "https://op.fornitore_identita.it/revoke",        |
-|                                                                          |
-| "end_session_endpoint": "https://op.fornitore_identita.it/logout",       |
-|                                                                          |
-| "jwks_uri": "https://registry.spid.gov.it/...",                          |
-|                                                                          |
-| "id_token_encryption_alg_values_supported": [                            |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "userinfo_signing_alg_values_supported": [                               |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "request_object_encryption_enc_values_supported": [                      |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "token_endpoint_auth_methods_supported": ["private_key_jwt"],            |
-|                                                                          |
-| "userinfo_encryption_alg_values_supported": [                            |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "id_token_encryption_enc_values_supported": [                            |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "id_token_signing_alg_values_supported": [                               |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "request_object_encryption_alg_values_supported": [                      |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "token_endpoint_auth_signing_alg_values_supported": [                    |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "request_object_signing_alg_values_supported": [                         |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "userinfo_encryption_enc_values_supported": [                            |
-|                                                                          |
-| "..."                                                                    |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "claims_supported":[                                                     |
-|                                                                          |
-| "https://attributes.spid.gov.it/spidCode",                               |
-|                                                                          |
-| "https://attributes.spid.gov.it/name",                                   |
-|                                                                          |
-| "https://attributes.spid.gov.it/familyName",                             |
-|                                                                          |
-| "https://attributes.spid.gov.it/placeOfBirth",                           |
-|                                                                          |
-| "https://attributes.spid.gov.it/countyOfBirth",                          |
-|                                                                          |
-| "https://attributes.spid.gov.it/dateOfBirth",                            |
-|                                                                          |
-| "https://attributes.spid.gov.it/gender",                                 |
-|                                                                          |
-| "https://attributes.spid.gov.it/companyName",                            |
-|                                                                          |
-| "https://attributes.spid.gov.it/registeredOffice",                       |
-|                                                                          |
-| "https://attributes.spid.gov.it/fiscalNumber",                           |
-|                                                                          |
-| "https://attributes.spid.gov.it/ivaCode",                                |
-|                                                                          |
-| "https://attributes.spid.gov.it/idCard",                                 |
-|                                                                          |
-| "https://attributes.spid.gov.it/mobilePhone",                            |
-|                                                                          |
-| "https://attributes.spid.gov.it/email",                                  |
-|                                                                          |
-| "https://attributes.spid.gov.it/address",                                |
-|                                                                          |
-| "https://attributes.spid.gov.it/expirationDate",                         |
-|                                                                          |
-| "https://attributes.spid.gov.it/digitalAddress"                          |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "acr_values_supported":[                                                 |
-|                                                                          |
-| "https://www.spid.gov.it/SpidL1",                                        |
-|                                                                          |
-| "https://www.spid.gov.it/SpidL2",                                        |
-|                                                                          |
-| "https://www.spid.gov.it/SpidL3                                          |
-|                                                                          |
-| ],                                                                       |
-|                                                                          |
-| "request_parameter_supported": true,                                     |
-|                                                                          |
-| "subject_types_supported":["public"],                                    |
-|                                                                          |
-| "op_name": "Agenzia per l'Italia Digitale",                              |
-|                                                                          |
-| "op_name#en": "Agency for Digital Italy",                                |
-|                                                                          |
-| "op_url": "https://www.agid.gov.it",                                     |
-|                                                                          |
-| "op_url#en": "https://www.agid.gov.it/en"                                |
-|                                                                          |
-| }                                                                        |
-+--------------------------------------------------------------------------+
+.. code-block:: json
+
+ {                                                                     
+  "issuer": "https://op.fornitore_identita.it",                             
+  "authorization_endpoint": "https://op.fornitore_identita.it/auth",        
+  "token_endpoint": "https://op.fornitore_identita.it/token",               
+  "userinfo_endpoint": "https://op.fornitore_identita.it/userinfo",         
+  "introspection_endpoint": "https://op.fornitore_identita.it/introspect",  
+  "revocation_endpoint": "https://op.fornitore_identita.it/revoke",         
+  "end_session_endpoint": "https://op.fornitore_identita.it/logout",        
+  "jwks_uri": "https://registry.spid.gov.it/...",                           
+  "id_token_encryption_alg_values_supported": [                             
+    "..."                                                                     
+  ],                                                                        
+  "userinfo_signing_alg_values_supported": [                                
+    "..."                                                                     
+  ],                                                                        
+  "request_object_encryption_enc_values_supported": [                       
+   "..."                                                                     
+  ],                                                                        
+  "token_endpoint_auth_methods_supported": ["private_key_jwt"],             
+  "userinfo_encryption_alg_values_supported": [                             
+   "..."                                                                     
+  ],                                                                        
+  "id_token_encryption_enc_values_supported": [                             
+   "..."                                                                     
+  ],                                                                        
+  "id_token_signing_alg_values_supported": [                                
+   "..."                                                                     
+  ],                                                                        
+  "request_object_encryption_alg_values_supported": [                       
+   "..."                                                                     
+  ],                                                                        
+  "token_endpoint_auth_signing_alg_values_supported": [                     
+   "..."                                                                     
+  ],                                                                        
+  "request_object_signing_alg_values_supported": [                          
+   "..."                                                                     
+  ],                                                                        
+  "userinfo_encryption_enc_values_supported": [                             
+   "..."                                                                     
+  ],                                                                        
+  "claims_supported":[                                                      
+   "https://attributes.spid.gov.it/spidCode",                                
+   "https://attributes.spid.gov.it/name",                                    
+   "https://attributes.spid.gov.it/familyName",                              
+   "https://attributes.spid.gov.it/placeOfBirth",                            
+   "https://attributes.spid.gov.it/countyOfBirth",                           
+   "https://attributes.spid.gov.it/dateOfBirth",                             
+   "https://attributes.spid.gov.it/gender",                                  
+   "https://attributes.spid.gov.it/companyName",                             
+   "https://attributes.spid.gov.it/registeredOffice",                        
+   "https://attributes.spid.gov.it/fiscalNumber",                            
+   "https://attributes.spid.gov.it/ivaCode",                                 
+   "https://attributes.spid.gov.it/idCard",                                  
+   "https://attributes.spid.gov.it/mobilePhone",                             
+   "https://attributes.spid.gov.it/email",                                   
+   "https://attributes.spid.gov.it/address",                                 
+   "https://attributes.spid.gov.it/expirationDate",                          
+   "https://attributes.spid.gov.it/digitalAddress"                           
+  ],                                                                        
+  "acr_values_supported":[                                                  
+   "https://www.spid.gov.it/SpidL1",                                         
+   "https://www.spid.gov.it/SpidL2",                                         
+   "https://www.spid.gov.it/SpidL3                                           
+  ],                                                                        
+  "request_parameter_supported": true,                                      
+  "subject_types_supported":["public"],                                     
+  "op_name": "Agenzia per l'Italia Digitale",                               
+  "op_name#en": "Agency for Digital Italy",                                 
+  "op_url": "https://www.agid.gov.it",                                      
+  "op_url#en": "https://www.agid.gov.it/en"                                 
+ }  
+
 
 **Esempio di risorsa jwks_uri:**
 
-+-------------------------------------------------------+
-| | {"keys": [                                          |
-| | {                                                   |
-| | "kty": "EC",                                        |
-| | "kid": "sig-ec256-0",                               |
-| | "use": "sig",                                       |
-| | "crv": "P-256",                                     |
-| | "x": "2jM2df3IjB9VYQ0yz373-6EEot_1TBuTRaRYafMi5K0", |
-| | "y": "h6Zlz6XReK0L-iu4ZgxlozJEXgTGUFuuDl7o8b_8JnM"  |
-| | },                                                  |
-| | {                                                   |
-| | "kty": "EC",                                        |
-| | "kid": "enc-ec256-0",                               |
-| | "use": "enc",                                       |
-| | "crv": "P-256",                                     |
-| | "x": "QI31cvWP4GwnWIi-Z0IYHauQ4nPCk8Vf1BHoPazGqEc", |
-| | "y": "DBwf8t9-abpXGtTDlZ8njjxAb33kOMrOqiGsd9oRxr0"  |
-| | }                                                   |
-| | ]                                                   |
-|                                                       |
-| }                                                     |
-+-------------------------------------------------------+
+.. code-block:: json
+
+ {
+   "keys": [                                          
+     {                                                   
+      "kty": "EC",                                        
+      "kid": "sig-ec256-0",                               
+      "use": "sig",                                       
+      "crv": "P-256",                                     
+      "x": "2jM2df3IjB9VYQ0yz373-6EEot_1TBuTRaRYafMi5K0", 
+      "y": "h6Zlz6XReK0L-iu4ZgxlozJEXgTGUFuuDl7o8b_8JnM"  
+     },                                                  
+     {                                                   
+      "kty": "EC",                                        
+      "kid": "enc-ec256-0",                               
+      "use": "enc",                                       
+      "crv": "P-256",                                     
+      "x": "QI31cvWP4GwnWIi-Z0IYHauQ4nPCk8Vf1BHoPazGqEc", 
+      "y": "DBwf8t9-abpXGtTDlZ8njjxAb33kOMrOqiGsd9oRxr0"  
+     }                                                   
+    ]                                                   
+ } 
+
 
 +-----------------------------------+-----------------------------------+
 | **Elemento**                      | **Descrizione**                   |
