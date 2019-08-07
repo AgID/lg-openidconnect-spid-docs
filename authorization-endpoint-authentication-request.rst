@@ -185,12 +185,12 @@ definite dall’Agenzia per l’Italia Digitale.
 +-----------------+-----------------+-----------------+-----------------+
 +-----------------+-----------------+-------------------------------+---+
 | **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1 |SI |
-|                 | riferimento     |                               |   |
-|                 | della classe di |                               |   |
-|                 | contesto        |https://www.spid.gov.it/SpidL2 |   |
+|                 | riferimento     |https://www.spid.gov.it/SpidL2 |   |
+|                 | della classe di |https://www.spid.gov.it/SpidL3 |   |
+|                 | contesto        |                               |   |
 |                 | dell’autenticaz |                               |   |
 |                 | ione            |                               |   |
-|                 | richiesta.      | https://www.spid.gov.it/SpidL3|   |
+|                 | richiesta.      |                               |   |
 |                 | Stringa         |                               |   |
 |                 | separata da uno |                               |   |
 |                 | spazio, che     |                               |   |
