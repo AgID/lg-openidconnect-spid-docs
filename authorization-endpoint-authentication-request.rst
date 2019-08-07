@@ -78,11 +78,15 @@ definite dall’Agenzia per l’Italia Digitale.
 |                  | richiesta al   | per PKCE"       |                 |
 |                  | Token endpoint.|                 |                 |
 +------------------+----------------+-----------------+-----------------+
-+--------------------------+-----------------+-----------------+--------+
-| **code_challenge_method**| Metodo di       | È obbligatorio  | SI     |
-|                          | costruzione del | specificare il  |        |
-|                          | challenge PKCE. | valore **S256** |        |
-+--------------------------+-----------------+-----------------+--------+
++--------------------------+--------+-----------------+-----------------+
+| **code_challenge_method**| Metodo | È obbligatorio  | SI              |
+|                          | di     | specificare il  |                 |
+|                          | costru | valore **S256** |                 |
+|                          | zione  |                 |                 |
+|                          | del    |                 |                 |
+|                          | challen|                 |                 |
+|                          |ge PKCE.|                 |                 |
++--------------------------+--------+-----------------+-----------------+
 +-----------------+-----------------+-----------------+-----------------+
 | **nonce**       | Valore che      | Stringa di      | SI              |
 |                 | serve ad        | almeno 32       |                 |
