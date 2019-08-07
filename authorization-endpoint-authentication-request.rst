@@ -60,8 +60,8 @@ definite dall’Agenzia per l’Italia Digitale.
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
-| **Parametro**   | **Descrizione** | **Valori        | **Obbligatorio* |
-|                 |                 | ammessi**       | *               |
+| **Parametro**   | **Descrizione** | **Valori        |**Obbligatorio** |
+|                 |                 | ammessi**       |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **client_id**   | URI che         | Deve            | SI              |
 |                 | identifica      | corrispondere   |                 |
