@@ -38,8 +38,7 @@ definite dall’Agenzia per l’Italia Digitale.
 | | **scope**\ =openid                                                  |
 |                                                                       |
 | **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                    |
-| https://www.spid.gov.it/SpidL2 <https://www.spid.gov.it/SpidL1%20http |
-| s://www.spid.gov.it/SpidL2>`__                                        |
+| https://www.spid.gov.it/SpidL2 __                                     |
 |                                                                       |
 | **claims**\ ={                                                        |
 |                                                                       |
