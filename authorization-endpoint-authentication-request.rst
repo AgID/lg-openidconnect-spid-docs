@@ -156,32 +156,33 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | deve restituire |                 |                 |
 |                 | l’OP.           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Scope**       | Lista degli     | **openid**      | SI              |
-|                 | scope           | (obbligatorio). |                 |
-|                 | richiesti.      |                 |                 |
-|                 |                 |**offline_access**|                |
-|                 |                 | se specificato, |                 |
-|                 |                 | l’OP rilascerà  |                 |
-|                 |                 | oltre           |                 |
-|                 |                 | all’\ *access   |                 |
-|                 |                 | token* anche un |                 |
-|                 |                 | *refresh token* |                 |
-|                 |                 | necessario per  |                 |
-|                 |                 | instaurare      |                 |
-|                 |                 | sessioni lunghe |                 |
-|                 |                 | revocabili.     |                 |
-|                 |                 | L’uso di questo |                 |
-|                 |                 | valore è        |                 |
-|                 |                 | consentito solo |                 |
-|                 |                 | se il client è  |                 |
-|                 |                 | un’applicazione |                 |
-|                 |                 | per dispositivi |                 |
-|                 |                 | mobili che      |                 |
-|                 |                 | intenda offrire |                 |
-|                 |                 | all’utente una  |                 |
-|                 |                 | sessione lunga  |                 |
-|                 |                 | revocabile.     |                 |
-+-----------------+-----------------+-----------------+-----------------+
++-----------------+-----------------+------------------+----------------+
+| **Scope**       | Lista degli     | **openid**       | SI             |
+|                 | scope           | (obbligatorio).  |                |
+|                 | richiesti.      |                  |                |
+|                 |                 |**offline_access**|                | 
+|                 |                 | se specificato,  |                |
+|                 |                 | l’OP rilascerà   |                |
+|                 |                 | oltre            |                |
+|                 |                 | all’\ *access    |                |
+|                 |                 | token* anche un  |                |
+|                 |                 | *refresh token*  |                |
+|                 |                 | necessario per   |                |
+|                 |                 | instaurare       |                |
+|                 |                 | sessioni lunghe  |                |
+|                 |                 | revocabili.      |                |
+|                 |                 | L’uso di questo  |                |
+|                 |                 | valore è         |                |
+|                 |                 | consentito solo  |                |
+|                 |                 | se il client è   |                |
+|                 |                 | un’applicazione  |                |
+|                 |                 | per dispositivi  |                |
+|                 |                 | mobili che       |                |
+|                 |                 | intenda offrire  |                |
+|                 |                 | all’utente una   |                |
+|                 |                 | sessione lunga   |                |
+|                 |                 | revocabile.      |                |
++-----------------+-----------------+------------------+----------------+
 +-----------------+-----------------+-------------------------------+---+
 | **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1 |SI |
 |                 | riferimento     |https://www.spid.gov.it/SpidL2 |   |
