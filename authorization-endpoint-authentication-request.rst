@@ -182,31 +182,31 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 | all’utente una  |                 |
 |                 |                 | sessione lunga  |                 |
 |                 |                 | revocabile.     |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1     |
-|                 | riferimento     |                 | SI              |
-|                 | della classe di |                 |                 |
-|                 | contesto        | https://www.spi |                 |
-|                 | dell’autenticaz | d.gov.it/SpidL2 |                 |
-|                 | ione            |                 |                 |
-|                 | richiesta.      | https://www.spi |                 |
-|                 | Stringa         | d.gov.it/SpidL3 |                 |
-|                 | separata da uno |                 |                 |
-|                 | spazio, che     |                 |                 |
-|                 | specifica i     |                 |                 |
-|                 | valori “acr”    |                 |                 |
-|                 | richiesti al    |                 |                 |
-|                 | server di       |                 |                 |
-|                 | autorizzazione  |                 |                 |
-|                 | per             |                 |                 |
-|                 | l'elaborazione  |                 |                 |
-|                 | della richiesta |                 |                 |
-|                 | di              |                 |                 |
-|                 | autenticazione, |                 |                 |
-|                 | con i valori    |                 |                 |
-|                 | visualizzati in |                 |                 |
-|                 | ordine di       |                 |                 |
-|                 | preferenza.     |                 |                 |
++-----------------+-----------------+-------------------------------+---+
+| **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1 |SI |
+|                 | riferimento     |                               |   |
+|                 | della classe di |                               |   |
+|                 | contesto        |https://www.spid.gov.it/SpidL2 |   |
+|                 | dell’autenticaz |                               |   |
+|                 | ione            |                               |   |
+|                 | richiesta.      | https://www.spid.gov.it/SpidL3|   |
+|                 | Stringa         |                               |   |
+|                 | separata da uno |                               |   |
+|                 | spazio, che     |                               |   |
+|                 | specifica i     |                               |   |
+|                 | valori “acr”    |                               |   |
+|                 | richiesti al    |                               |   |
+|                 | server di       |                               |   |
+|                 | autorizzazione  |                               |   |
+|                 | per             |                               |   |
+|                 | l'elaborazione  |                               |   |
+|                 | della richiesta |                               |   |
+|                 | di              |                               |   |
+|                 | autenticazione, |                               |   |
+|                 | con i valori    |                               |   |
+|                 | visualizzati in |                               |   |
+|                 | ordine di       |                               |   |
+|                 | preferenza.     |                               |   |
 +-----------------+-----------------+-----------------+-----------------+
 | **Claims**      | Lista dei       | v. paragrafo    | SI              |
 |                 | claims          | 5.1             |                 |
