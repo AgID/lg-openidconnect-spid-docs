@@ -69,15 +69,15 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | RP come da      | nel Registro    |                 |
 |                 | Registro SPID.  | SPID.           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-+------------------+-----------------+-----------------+----------------+
-|**code_challenge**| Un challenge    | V. paragrafo    | SI             |
-|                  | per PKCE da     | 6.1             |                |
-|                  | riportare anche | "Generazione    |                |
-|                  | nella           | del             |                |
-|                  | successiva      | code_challenge  |                |
-|                  | richiesta al    | per PKCE"       |                |
-|                  | Token endpoint. |                 |                |
-+------------------+-----------------+-----------------+----------------+
++------------------+----------------+-----------------+-----------------+
+|**code_challenge**| Un challenge   | V. paragrafo    | SI              |
+|                  | per PKCE da    | 6.1             |                 |
+|                  | riportare anche| "Generazione    |                 |
+|                  | nella          | del             |                 |
+|                  | successiva     | code_challenge  |                 |
+|                  | richiesta al   | per PKCE"       |                 |
+|                  | Token endpoint.|                 |                 |
++------------------+----------------+-----------------+-----------------+
 +--------------------------+-----------------+-----------------+--------+
 | **code_challenge_method**| Metodo di       | È obbligatorio  | SI     |
 |                          | costruzione del | specificare il  |        |
