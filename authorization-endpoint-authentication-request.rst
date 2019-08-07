@@ -183,8 +183,8 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 | sessione lunga  |                 |
 |                 |                 | revocabile.     |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **acr_values**  | Valori di       |https://www.spid.| SI              |
-|                 | riferimento     |gov.it/SpidL1    |                 |
+| **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1| SI |
+|                 | riferimento     |                 |                 |
 |                 | della classe di |                 |                 |
 |                 | contesto        | https://www.spi |                 |
 |                 | dell’autenticaz | d.gov.it/SpidL2 |                 |
