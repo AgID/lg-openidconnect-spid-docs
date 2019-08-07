@@ -159,8 +159,7 @@ definite dall’Agenzia per l’Italia Digitale.
 | **Scope**       | Lista degli     | **openid**      | SI              |
 |                 | scope           | (obbligatorio). |                 |
 |                 | richiesti.      |                 |                 |
-|                 |                 | **offline_acces |                 |
-|                 |                 | s**:            |                 |
+|                 |                 |**offline_access**|                |
 |                 |                 | se specificato, |                 |
 |                 |                 | l’OP rilascerà  |                 |
 |                 |                 | oltre           |                 |
