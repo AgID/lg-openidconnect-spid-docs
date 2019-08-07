@@ -1,0 +1,6 @@
+document:
+  name: Linee Guida OpenID Connect in SPID
+  description: |
+    Linee Guida per l'utilizzo di OpenID Connect in SPID  
+  tags:
+    - "spid"
