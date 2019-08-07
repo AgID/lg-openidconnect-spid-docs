@@ -334,14 +334,11 @@ con alcuni campi in aggiunta.
 |                                   | come URI. Può contenere uno o più |
 |                                   | valori tra i seguenti:            |
 |                                   |                                   |
-|                                   | -  **https://www.spid.gov.it/Spid |
-|                                   | L1**                              |
+|                                   | - https://www.spid.gov.it/SpidL1  |
 |                                   |                                   |
-|                                   | -  **https://www.spid.gov.it/Spid |
-|                                   | L2**                              |
+|                                   | - https://www.spid.gov.it/SpidL2  |
 |                                   |                                   |
-|                                   | -  **https://www.spid.gov.it/Spid |
-|                                   | L3**                              |
+|                                   | - https://www.spid.gov.it/SpidL3  |
 +-----------------------------------+-----------------------------------+
 | **request_parameter_supported**   | Valore booleano che indica se il  |
 |                                   | parametro **request** è           |
