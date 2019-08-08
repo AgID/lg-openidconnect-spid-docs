@@ -73,16 +73,16 @@ la validazione dell’ID Token.
 |                       | del token in formato  |                       |
 |                       | UTC.                  |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Nbf**               | Data/ora di inizio    ||{                     |
-|                       | validità del token in ||userinfo: {...}       |
-|                       | formato UTC. Deve     ||id_token: {           |
-|                       | corrispondere con il  ||acr: {...},           |
-|                       | valore di **iat**.    ||nbf: { essential:     |
+| **Nbf**               | Data/ora di inizio    | |{                    |
+|                       | validità del token in | |userinfo: {...}      |
+|                       | formato UTC. Deve     | |id_token: {          |
+|                       | corrispondere con il  | |acr: {...},          |
+|                       | valore di **iat**.    | |nbf: { essential:    |
 |                       |                       | true},                |
-|                       |                       ||jti: { essential:     |
+|                       |                       | |jti: { essential:    |
 |                       |                       | true }                |
-|                       |                       ||}                     |
-|                       |                       ||}                     |
+|                       |                       | |}                    |
+|                       |                       | |}                    |
 +-----------------------+-----------------------+-----------------------+
 | **Exp**               | Data/ora di scadenza  |                       |
 |                       | del token in formato  |                       |
@@ -118,9 +118,8 @@ la validazione dell’ID Token.
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#IDToken          |
-|                                                                       |
-| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.s |
-| ection.3.1                                                            |
-+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#IDToken                    |
+|                                                                                 |
+| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.3.1 |
++---------------------------------------------------------------------------------+
