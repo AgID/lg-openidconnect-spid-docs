@@ -22,6 +22,7 @@ consentire ai client Java Script di accedere all'endpoint.
 
 +-------------------------------------------------------------------------------+
 | http://openid.net/specs/openid-connect-core-1_0.html#UserInfo                 |
+|                                                                               |
 | https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.4 |
 +-------------------------------------------------------------------------------+
 
