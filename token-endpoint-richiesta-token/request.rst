@@ -118,8 +118,8 @@ Request
 |                 | tion            |                 | _code**         |
 |                 | response.       |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **code_verifier | Codice di       |                 | Solo se         |
-| **              | verifica del    |                 | **grant_type**  |
+|**code_verifier**| Codice di       |                 | Solo se         |
+|                 | verifica del    |                 | **grant_type**  |
 |                 | code_challenge  |                 | è               |
 |                 | (v paragrafo    |                 | **authorization |
 |                 | 5.2)            |                 | _code**         |
@@ -135,9 +135,9 @@ Request
 |                 |                 | **refresh_token |                 |
 |                 |                 | **              |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **refresh_token |                 |                 | Solo se         |
-| **              |                 |                 | **grant_type**  |
+|**refresh_token**|                 |                 | Solo se         |
+|                 |                 |                 | **grant_type**  |
 |                 |                 |                 | è               |
-|                 |                 |                 | **refresh_token |
-|                 |                 |                 | **              |
+|                 |                 |                 |**refresh_token**|
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
