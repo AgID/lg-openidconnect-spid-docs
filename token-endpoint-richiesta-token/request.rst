@@ -5,17 +5,15 @@ Request
 
 +-----------------------------------------------------------------------+
 | *POST https://op.spid.agid.gov.it/token?*                             |
-|                                                                       |
 | **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                    |
-|                                                                       |
-| | **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI |
+| **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI   |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
 | q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&                                      |
-| | **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as |
+| **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as   |
 | sertion-type%3Ajwt-bearer&                                            |
-| | **code**\ =usDwMnEzJPpG5oaV8x3j&\ **                                |
-|   code_verifier**\ =9g8S40MozM3NSqjHnhi7OnsE38jklFv2&\ **             |
-|   grant_type**\ =authorization_code                                   |
+| **code**\ =usDwMnEzJPpG5oaV8x3j&\                                     |
+| **code_verifier**\ =9g8S40MozM3NSqjHnhi7OnsE38jklFv2&\                |
+| **grant_type**\ =authorization_code                                   |
 +-----------------------------------------------------------------------+
 
 **Esempio di richiesta con refresh token (caso 2):**
