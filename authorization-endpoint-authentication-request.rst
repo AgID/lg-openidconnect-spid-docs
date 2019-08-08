@@ -164,7 +164,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | l’OP.           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 +-----------------+-----------------+------------------+----------------+
-| **Scope**       | Lista degli     | **openid**       | SI             |
+| **Scope**       | Lista degli     |**openid**        | SI             |
 |                 | scope           | (obbligatorio).  |                |
 |                 | richiesti.      |                  |                |
 |                 |                 |**offline_access**|                | 
