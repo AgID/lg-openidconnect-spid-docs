@@ -13,21 +13,13 @@ Request.
 +-------------------------------------------------------------------------+
 | | {                                                                     |
 | | "**iss**": "https://op.fornitore_identita.it",                        |
-|                                                                         |
-| "**aud**": "https://rp.fornitore_servizio.it",                          |
-|                                                                         |
-| "**iat**": 1519032969,                                                  |
-|                                                                         |
-| "**nbf**": 1519032969,                                                  |
-|                                                                         |
-| "**exp**": 1519033149,                                                  |
-|                                                                         |
-| "**sub**": "OP-1234567890",                                             |
-|                                                                         |
-| "**name**": "Mario",                                                    |
-|                                                                         |
-| "**https://attributes.spid.gov.it/familyName**": "Rossi",               |
-|                                                                         |
+| | "**aud**": "https://rp.fornitore_servizio.it",                        |
+| | "**ia t**": 1519032969,                                               |
+| | "**nbf**": 1519032969,                                                |
+| | "**exp**": 1519033149,                                                |
+| | "**sub**": "OP-1234567890",                                           |
+| | "**name**": "Mario",                                                  |
+| |"**https://attributes.spid.gov.it/familyName**": "Rossi",              |
 | | "**https://attributes.spid.gov.it/fiscalNumber**": "MROXXXXXXXXXXXXX" |
 | | }                                                                     |
 +-------------------------------------------------------------------------+
