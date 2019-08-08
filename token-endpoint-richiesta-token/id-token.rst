@@ -10,18 +10,13 @@ la validazione dell’ID Token.
 +---------------------------------------------------+
 | | {                                               |
 | | "**iss**": "https://rp.spid.agid.gov.it/",      |
-|                                                   |
 | | "**sub**": "OP-1234567890",                     |
 | | "**aud**": "https://op.spid.agid.gov.it/auth",  |
 | | "**acr**": "https://www.spid.gov.it/SpidL2",    |
-|                                                   |
-| "**at_hash**": "qiyh4XPJGsOZ2MEAyLkfWqeQ",        |
-|                                                   |
-| "**iat**": 1519032969,                            |
-|                                                   |
+| | "**at_hash**": "qiyh4XPJGsOZ2MEAyLkfWqeQ",      |
+| | "**iat**": 1519032969,                          |
 | | "**nbf**": 1519032969,                          |
 | | "**exp**": 1519033149,                          |
-|                                                   |
 | | "**jti**": "nw4J0zMwRk4kRbQ53G7z",              |
 | | "**nonce**": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2" |
 | | }                                               |
