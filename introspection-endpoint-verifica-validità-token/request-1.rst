@@ -17,8 +17,8 @@ che consente di identificare il RP che esegue la richiesta.
 | q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&                                      |
 | | **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as |
 | sertion-type%3Ajwt-bearer&                                            |
-| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it&\ **              |
-|   token**\ =eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTg3MDI0MTQsImF1ZCI6WyJl |
+| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it&\                 |
+|| **token**\ =eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTg3MDI0MTQsImF1ZCI6WyJl|
 | NzFmYjcyYS05NzRmLTQwMDEtYmNiNy1lNjdjMmJjMDAzN2YiXSwiaXNzIjoiaHR0cHM6X |
 | C9cL2FzLXZhLmV4YW1wbGUuY29tXC8iLCJqdGkiOiIyMWIxNTk2ZC04NWQzLTQzN2MtYW |
 | Q4My1iM2YyY2UyNDcyNDQiLCJpYXQiOjE0MTg2OTg4MTR9.FXDtEzDLbTHzFNroW7w27R |
