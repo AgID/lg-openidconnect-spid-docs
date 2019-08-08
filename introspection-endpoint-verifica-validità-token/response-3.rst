@@ -37,9 +37,9 @@ segue.
 |                       | dell’Authorization    |                       |
 |                       | Request.              |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Exp**               | Scadenza del token.   |                       |
+| **exp**               | Scadenza del token.   |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Sub**               | Identificatore del    | Il RP deve verificare |
+| **sub**               | Identificatore del    | Il RP deve verificare |
 |                       | soggetto, coincidente | che il valore         |
 |                       | con quello già        | coincida con quello   |
 |                       | rilasciato nell’ID    | contenuto nell’ID     |
