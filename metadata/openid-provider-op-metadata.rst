@@ -48,7 +48,7 @@ con alcuni campi in aggiunta.
 || "userinfo_encryption_enc_values_supported": [                            |
 | "..."                                                                     |
 | ],                                                                        |
-|| "claims_supported": [                                                     |
+|| "claims_supported": [                                                    |
 || "https://attributes.spid.gov.it/spidCode",                               |
 || "https://attributes.spid.gov.it/name",                                   |
 || "https://attributes.spid.gov.it/familyName",                             |
@@ -67,7 +67,7 @@ con alcuni campi in aggiunta.
 || "https://attributes.spid.gov.it/expirationDate",                         |
 || "https://attributes.spid.gov.it/digitalAddress"                          |
 || ],                                                                       |
-|| "acr_values_supported": [                                                 |
+|| "acr_values_supported": [                                                |
 || "https://www.spid.gov.it/SpidL1",                                        |
 || "https://www.spid.gov.it/SpidL2",                                        |
 || "https://www.spid.gov.it/SpidL3                                          |
