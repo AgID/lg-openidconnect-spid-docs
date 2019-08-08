@@ -8,13 +8,13 @@ richiedere come chiavi di oggetti JSON, i cui valori devono essere
 momento della chiamata allo UserInfo Endpoint.
 
 +-----------------------------------------------------------------------+
-| {                                                                     |
-| "userinfo": {                                                         |
-| "https://attributes.spid.gov.it/`familyName <https://attributes.spid. |
+|| {                                                                    |
+|| "userinfo": {                                                        |
+|| "https://attributes.spid.gov.it/`familyName <https://attributes.spid.|
 | gov.it/familyName>`__":                                               |
-| {"essential": true}                                                   |
-| },                                                                    |
-| }                                                                     |
+|| {"essential": true}                                                  |
+|| },                                                                   |
+|| }                                                                    |
 +-----------------------------------------------------------------------+
 
 Se il Relying Party è privato, gli OpenID Provider devono controllare
