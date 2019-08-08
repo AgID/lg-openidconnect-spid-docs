@@ -23,7 +23,6 @@ convenzione, possono utilizzare.
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#IndividualClaims |
-| Requests                                                              |
-+-----------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests |                                                         
++-------------------------------------------------------------------------------+
