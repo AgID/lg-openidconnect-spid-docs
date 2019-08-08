@@ -20,22 +20,19 @@ Request
 
 +-----------------------------------------------------------------------+
 | *POST https://op.spid.agid.gov.it/token?*                             |
-|                                                                       |
 | **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                    |
-|                                                                       |
-| | **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI |
+| **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI   |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
 | q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&                                      |
-| | **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as |
-| sertion-type%3Ajwt-bearer&\ **                                        |
-|   grant_type**\ =refresh_token&                                       |
-|                                                                       |
+| **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as   |
+| sertion-type%3Ajwt-bearer&\                                           |
+| **grant_type**\ =refresh_token&                                       |
 | **refresh_token**\ =8xLOxBtZp8                                        |
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
-| **Parametro**   | **Descrizione** | **Valori        | **Obbligatorio* |
-|                 |                 | ammessi**       | *               |
+| **Parametro**   | **Descrizione** | **Valori        |**Obbligatorio** |
+|                 |                 | ammessi**       |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **client_id**   | URI che         |                 | SI              |
 |                 | identifica      |                 |                 |
