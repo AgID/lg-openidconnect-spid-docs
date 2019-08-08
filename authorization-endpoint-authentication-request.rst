@@ -36,7 +36,7 @@ definite dall’Agenzia per l’Italia Digitale.
 | | **response_type**\ =code                                            |
 | | **scope**\ =openid                                                  |
 | | **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                  |
-| https://www.spid.gov.it/SpidL2                                        |
+| | https://www.spid.gov.it/SpidL2                                      |
 | | **claims**\ ={                                                      |
 | | **"id_token"**:{                                                    |
 | | "nbf": { essential: true},                                          |
