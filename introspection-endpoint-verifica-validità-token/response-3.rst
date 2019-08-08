@@ -11,13 +11,9 @@ segue.
 +----------------------------------------------+
 | | {                                          |
 | | "**active**": true,                        |
-|                                              |
-| "**scope**": "foo bar",                      |
-|                                              |
-| "**exp**": 1519033149,                       |
-|                                              |
-| "**sub**": "OP-1234567890",                  |
-|                                              |
+| | "**scope**": "foo bar",                    |
+| | "**exp**": 1519033149,                     |
+| | "**sub**": "OP-1234567890",                |
 | | "**client_id**": "https://rp.agid.gov.it/" |
 | | }                                          |
 +----------------------------------------------+
@@ -41,9 +37,9 @@ segue.
 |                       | dell’Authorization    |                       |
 |                       | Request.              |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Exp**               | Scadenza del token.   |                       |
+| **exp**               | Scadenza del token.   |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Sub**               | Identificatore del    | Il RP deve verificare |
+| **sub**               | Identificatore del    | Il RP deve verificare |
 |                       | soggetto, coincidente | che il valore         |
 |                       | con quello già        | coincida con quello   |
 |                       | rilasciato nell’ID    | contenuto nell’ID     |
