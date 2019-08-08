@@ -11,7 +11,8 @@ definite dall’Agenzia per l’Italia Digitale.
 **Esempio (chiamata HTTP):**
 
 +-----------------------------------------------------------------------+
-| https://op.spid.agid.gov.it/auth?\ **request**\ =eyJhbGciOiJSUzI1NiIs |
+| https://op.spid.agid.gov.it/auth?                                     |
+|| **request**\ =eyJhbGciOiJSUzI1NiIs                                   |
 | ImtpZCI6ImsyYmRjIn0.ew0KICJpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJod |
 | HRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQogInJlc3BvbnNlX3R5cGUiOiAiY29kZS |
 | BpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQzIiwNCiAicmVkaXJlY3R |
@@ -26,9 +27,7 @@ definite dall’Agenzia per l’Italia Digitale.
 
 +-----------------------------------------------------------------------+
 | {                                                                     |
-|                                                                       |
-| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                     |
-|                                                                       |
+| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                    |
 | | **code_challenge**\ =qWJlMe0xdbXrKxTm72EpH659bUxAxw80               |
 | | **code_challenge_method**\ =S256                                    |
 | | **nonce**\ =MBzGqyf9QytD28eupyWhSqMj78WNqpc2                        |
@@ -36,27 +35,20 @@ definite dall’Agenzia per l’Italia Digitale.
 | | **redirect_uri**\ =https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F |
 | | **response_type**\ =code                                            |
 | | **scope**\ =openid                                                  |
-|                                                                       |
-| **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                    |
+| | **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                  |
 | https://www.spid.gov.it/SpidL2                                        |
-|                                                                       |
-| **claims**\ ={                                                        |
-|                                                                       |
-| "id_token":{                                                          |
-|                                                                       |
-| "nbf": { essential: true},                                            |
-|                                                                       |
-| "jti": { essential: true }                                            |
-|                                                                       |
+| | **claims**\ ={                                                      |
+| | **"id_token"**:{                                                    |
+| | "nbf": { essential: true},                                          |
+| | "jti": { essential: true }                                          |
 | | },                                                                  |
-| | "userinfo":{                                                        |
+| | **"userinfo":{                                                      |
 | | "https://attributes.spid.gov.it/name": null,                        |
 | | "https://attributes.spid.gov.it/familyName": null                   |
 | | },                                                                  |
 | | }                                                                   |
 | | **state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        |
-|                                                                       |
-| }                                                                     |
+| | }                                                                     |
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
