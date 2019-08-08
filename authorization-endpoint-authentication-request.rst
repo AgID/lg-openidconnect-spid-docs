@@ -26,7 +26,7 @@ definite dall’Agenzia per l’Italia Digitale.
 **Esempio (contenuto del JWT):**
 
 +-----------------------------------------------------------------------+
-| {                                                                     |
+| | {                                                                   |
 | | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                   |
 | | **code_challenge**\ =qWJlMe0xdbXrKxTm72EpH659bUxAxw80               |
 | | **code_challenge_method**\ =S256                                    |
