@@ -27,17 +27,17 @@ Request.
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
 +-----------------------+-----------------------+-----------------------+
-| **Sub**               | Identificatore del    | Il RP deve verificare |
+| **sub**               | Identificatore del    | Il RP deve verificare |
 |                       | soggetto, coincidente | che il valore         |
 |                       | con quello già        | coincida con quello   |
 |                       | rilasciato nell’ID    | contenuto nell’ID     |
 |                       | Token.                | Token.                |
 +-----------------------+-----------------------+-----------------------+
-| **Aud**               | Identificatore del    |                       |
+| **aud**               | Identificatore del    |                       |
 |                       | soggetto destinatario |                       |
 |                       | della response        |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Iss**               | URI che identifica    | Il RP deve verificare |
+| **iss**               | URI che identifica    | Il RP deve verificare |
 |                       | univocamente il RP    | che il valore         |
 |                       | come da Registro SPID | coincida con il       |
 |                       | (client_id).          | proprio client_id.    |
