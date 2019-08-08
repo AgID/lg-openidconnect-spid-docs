@@ -11,7 +11,7 @@ identificare il RP che esegue la richiesta.
 
 
 +-----------------------------------------------------------------------+
-| *POST https://op.spid.agid.gov.it/revoke?*                            |                       
+| | *POST https://op.spid.agid.gov.it/revoke?*                          |                       
 | | **client_assertion**=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOi|
 |IxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9q7oiX|
 |cYVIIqGWY0wWQlqxvFGYswLF88&                                            |
