@@ -10,18 +10,13 @@ la validazione dell’ID Token.
 +---------------------------------------------------+
 | | {                                               |
 | | "**iss**": "https://rp.spid.agid.gov.it/",      |
-|                                                   |
 | | "**sub**": "OP-1234567890",                     |
 | | "**aud**": "https://op.spid.agid.gov.it/auth",  |
 | | "**acr**": "https://www.spid.gov.it/SpidL2",    |
-|                                                   |
-| "**at_hash**": "qiyh4XPJGsOZ2MEAyLkfWqeQ",        |
-|                                                   |
-| "**iat**": 1519032969,                            |
-|                                                   |
+| | "**at_hash**": "qiyh4XPJGsOZ2MEAyLkfWqeQ",      |
+| | "**iat**": 1519032969,                          |
 | | "**nbf**": 1519032969,                          |
 | | "**exp**": 1519033149,                          |
-|                                                   |
 | | "**jti**": "nw4J0zMwRk4kRbQ53G7z",              |
 | | "**nonce**": "MBzGqyf9QytD28eupyWhSqMj78WNqpc2" |
 | | }                                               |
@@ -78,16 +73,16 @@ la validazione dell’ID Token.
 |                       | del token in formato  |                       |
 |                       | UTC.                  |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Nbf**               | Data/ora di inizio    | {                     |
-|                       | validità del token in | userinfo: {...}       |
-|                       | formato UTC. Deve     | id_token: {           |
-|                       | corrispondere con il  | acr: {...},           |
-|                       | valore di **iat**.    | nbf: { essential:     |
+| **Nbf**               | Data/ora di inizio    || {                    |
+|                       | validità del token in || userinfo: {...}      |
+|                       | formato UTC. Deve     || id_token: {          |
+|                       | corrispondere con il  || acr: {...},          |
+|                       | valore di **iat**.    || nbf: { essential:    |
 |                       |                       | true},                |
-|                       |                       | jti: { essential:     |
+|                       |                       || jti: { essential:    |
 |                       |                       | true }                |
-|                       |                       | }                     |
-|                       |                       | }                     |
+|                       |                       || }                    |
+|                       |                       || }                    |
 +-----------------------+-----------------------+-----------------------+
 | **Exp**               | Data/ora di scadenza  |                       |
 |                       | del token in formato  |                       |
@@ -123,9 +118,8 @@ la validazione dell’ID Token.
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#IDToken          |
-|                                                                       |
-| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.s |
-| ection.3.1                                                            |
-+-----------------------------------------------------------------------+
++---------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#IDToken                    |
+|                                                                                 |
+| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.3.1 |
++---------------------------------------------------------------------------------+

@@ -4,40 +4,35 @@ Request
 **Esempio di richiesta con authorization code (caso 1):**
 
 +-----------------------------------------------------------------------+
-| *POST https://op.spid.agid.gov.it/token?*                             |
-|                                                                       |
-| **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                    |
-|                                                                       |
-| | **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI |
+|| *POST https://op.spid.agid.gov.it/token?*                            |
+|| **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                   |
+|| **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI  |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
 | q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&                                      |
-| | **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as |
+|| **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as  |
 | sertion-type%3Ajwt-bearer&                                            |
-| | **code**\ =usDwMnEzJPpG5oaV8x3j&\ **                                |
-|   code_verifier**\ =9g8S40MozM3NSqjHnhi7OnsE38jklFv2&\ **             |
-|   grant_type**\ =authorization_code                                   |
+|| **code**\ =usDwMnEzJPpG5oaV8x3j&\                                    |
+|| **code_verifier**\ =9g8S40MozM3NSqjHnhi7OnsE38jklFv2&\               |
+|| **grant_type**\ =authorization_code                                  |
 +-----------------------------------------------------------------------+
 
 **Esempio di richiesta con refresh token (caso 2):**
 
 +-----------------------------------------------------------------------+
-| *POST https://op.spid.agid.gov.it/token?*                             |
-|                                                                       |
-| **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                    |
-|                                                                       |
-| | **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI |
+|| *POST https://op.spid.agid.gov.it/token?*                            |
+|| **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                   |
+|| **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI  |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
 | q7oiXcYVIIqGWY0wWQlqxvFGYswLF88&                                      |
-| | **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as |
-| sertion-type%3Ajwt-bearer&\ **                                        |
-|   grant_type**\ =refresh_token&                                       |
-|                                                                       |
-| **refresh_token**\ =8xLOxBtZp8                                        |
+|| **client_assertion_type**\ =urn%3Aietf%3Aparams%3Aoauth%3Aclient-as  |
+| sertion-type%3Ajwt-bearer&\                                           |
+|| **grant_type**\ =refresh_token&                                      |
+|| **refresh_token**\ =8xLOxBtZp8                                       |
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
-| **Parametro**   | **Descrizione** | **Valori        | **Obbligatorio* |
-|                 |                 | ammessi**       | *               |
+| **Parametro**   | **Descrizione** | **Valori        |**Obbligatorio** |
+|                 |                 | ammessi**       |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **client_id**   | URI che         |                 | SI              |
 |                 | identifica      |                 |                 |
@@ -123,8 +118,8 @@ Request
 |                 | tion            |                 | _code**         |
 |                 | response.       |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **code_verifier | Codice di       |                 | Solo se         |
-| **              | verifica del    |                 | **grant_type**  |
+|**code_verifier**| Codice di       |                 | Solo se         |
+|                 | verifica del    |                 | **grant_type**  |
 |                 | code_challenge  |                 | è               |
 |                 | (v paragrafo    |                 | **authorization |
 |                 | 5.2)            |                 | _code**         |
@@ -137,12 +132,12 @@ Request
 |                 | corrente.       | **authorization |                 |
 |                 |                 | _code**         |                 |
 |                 |                 |                 |                 |
-|                 |                 | **refresh_token |                 |
-|                 |                 | **              |                 |
+|                 |                 | **refresh       |                 |
+|                 |                 | _token**        |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **refresh_token |                 |                 | Solo se         |
-| **              |                 |                 | **grant_type**  |
-|                 |                 |                 | è               |
-|                 |                 |                 | **refresh_token |
-|                 |                 |                 | **              |
+|**refresh_token**|                 |                 |Solo se          |
+|                 |                 |                 |**grant_type**   |
+|                 |                 |                 |è                |
+|                 |                 |                 |**refresh_token**|
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+

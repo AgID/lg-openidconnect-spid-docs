@@ -11,7 +11,8 @@ definite dall’Agenzia per l’Italia Digitale.
 **Esempio (chiamata HTTP):**
 
 +-----------------------------------------------------------------------+
-| https://op.spid.agid.gov.it/auth?\ **request**\ =eyJhbGciOiJSUzI1NiIs |
+|| https://op.spid.agid.gov.it/auth?                                    |
+|| **request**\ =eyJhbGciOiJSUzI1NiIs                                   |
 | ImtpZCI6ImsyYmRjIn0.ew0KICJpc3MiOiAiczZCaGRSa3F0MyIsDQogImF1ZCI6ICJod |
 | HRwczovL3NlcnZlci5leGFtcGxlLmNvbSIsDQogInJlc3BvbnNlX3R5cGUiOiAiY29kZS |
 | BpZF90b2tlbiIsDQogImNsaWVudF9pZCI6ICJzNkJoZFJrcXQzIiwNCiAicmVkaXJlY3R |
@@ -25,10 +26,8 @@ definite dall’Agenzia per l’Italia Digitale.
 **Esempio (contenuto del JWT):**
 
 +-----------------------------------------------------------------------+
-| {                                                                     |
-|                                                                       |
-| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                     |
-|                                                                       |
+| | {                                                                   |
+| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                   |
 | | **code_challenge**\ =qWJlMe0xdbXrKxTm72EpH659bUxAxw80               |
 | | **code_challenge_method**\ =S256                                    |
 | | **nonce**\ =MBzGqyf9QytD28eupyWhSqMj78WNqpc2                        |
@@ -36,32 +35,25 @@ definite dall’Agenzia per l’Italia Digitale.
 | | **redirect_uri**\ =https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F |
 | | **response_type**\ =code                                            |
 | | **scope**\ =openid                                                  |
-|                                                                       |
-| **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                    |
-| https://www.spid.gov.it/SpidL2                                        |
-|                                                                       |
-| **claims**\ ={                                                        |
-|                                                                       |
-| "id_token":{                                                          |
-|                                                                       |
-| "nbf": { essential: true},                                            |
-|                                                                       |
-| "jti": { essential: true }                                            |
-|                                                                       |
+| | **acr_values**\ =\ https://www.spid.gov.it/SpidL1                   |
+| | https://www.spid.gov.it/SpidL2                                      |
+| | **claims**\ ={                                                      |
+| | **"id_token"**:{                                                    |
+| | **"nbf"**: { essential: true},                                      |
+| | **"jti"**: { essential: true }                                      |
 | | },                                                                  |
-| | "userinfo":{                                                        |
+| | **"userinfo"**:{                                                    |
 | | "https://attributes.spid.gov.it/name": null,                        |
 | | "https://attributes.spid.gov.it/familyName": null                   |
 | | },                                                                  |
 | | }                                                                   |
 | | **state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        |
-|                                                                       |
-| }                                                                     |
+| | }                                                                   |
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
-| **Parametro**   | **Descrizione** | **Valori        | **Obbligatorio* |
-|                 |                 | ammessi**       | *               |
+| **Parametro**   | **Descrizione** | **Valori        |**Obbligatorio** |
+|                 |                 | ammessi**       |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **client_id**   | URI che         | Deve            | SI              |
 |                 | identifica      | corrispondere   |                 |
@@ -69,19 +61,26 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | RP come da      | nel Registro    |                 |
 |                 | Registro SPID.  | SPID.           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Un challenge    | V. paragrafo    | SI              |
-| e**             | per PKCE da     | 6.1             |                 |
-|                 | riportare anche | "Generazione    |                 |
-|                 | nella           | del             |                 |
-|                 | successiva      | code_challenge  |                 |
-|                 | richiesta al    | per PKCE"       |                 |
-|                 | Token endpoint. |                 |                 |
++------------------+----------------+-----------------+-----------------+
+|**code_challenge**| Un challenge   | V. paragrafo    | SI              |
+|                  | per PKCE da    | 6.1             |                 |
+|                  | riportare anche| "Generazione    |                 |
+|                  | nella          | del             |                 |
+|                  | successiva     | code_challenge  |                 |
+|                  | richiesta al   | per PKCE"       |                 |
+|                  | Token endpoint.|                 |                 |
++------------------+----------------+-----------------+-----------------+
++-------------------------+---------+-----------------+-----------------+
+|**code_challenge_method**| Metodo  | È obbligatorio  | SI              |
+|                         | di      | specificare il  |                 |
+|                         | costru  | valore **S256** |                 |
+|                         | zione   |                 |                 |
+|                         | del     |                 |                 |
+|                         | challen |                 |                 |
+|                         | ge PKCE.|                 |                 |
++-------------------------+---------+-----------------+-----------------+
 +-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Metodo di       | È obbligatorio  | SI              |
-| e_method**      | costruzione del | specificare il  |                 |
-|                 | challenge PKCE. | valore **S256** |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Nonce**       | Valore che      | Stringa di      | SI              |
+| **nonce**       | Valore che      | Stringa di      | SI              |
 |                 | serve ad        | almeno 32       |                 |
 |                 | evitare         | caratteri       |                 |
 |                 | attacchi Reply, | alfanumerici.   |                 |
@@ -104,7 +103,7 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | di              |                 |                 |
 |                 | autenticazione. |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Prompt**      | Definisce se    | **consent**:    | SI              |
+| **prompt**      | Definisce se    | **consent**:    | SI              |
 |                 | l’OP deve       | l’OP chiederà   |                 |
 |                 | occuparsi di    | le credenziali  |                 |
 |                 | eseguire una    | di              |                 |
@@ -144,69 +143,71 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 |                 | riautenticazion |                 |
 |                 |                 | e)              |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **redirect_uri* | URL dove l’OP   | Deve essere uno | SI              |
-| *               | reindirizzerà   | degli URL       |                 |
+|**redirect_uri** | URL dove l’OP   | Deve essere uno | SI              |
+|                 | reindirizzerà   | degli URL       |                 |
 |                 | l’utente al     | indicati nel    |                 |
 |                 | termine del     | client metadata |                 |
 |                 | processo di     | (v. paragrafo   |                 |
 |                 | autenticazione. | 3.2).           |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **response_type | Il tipo di      | **code**        | SI              |
-| **              | credenziali che |                 |                 |
+|**response_type**| Il tipo di      | **code**        | SI              |
+|                 | credenziali che |                 |                 |
 |                 | deve restituire |                 |                 |
 |                 | l’OP.           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **Scope**       | Lista degli     | **openid**      | SI              |
-|                 | scope           | (obbligatorio). |                 |
-|                 | richiesti.      |                 |                 |
-|                 |                 | **offline_acces |                 |
-|                 |                 | s**:            |                 |
-|                 |                 | se specificato, |                 |
-|                 |                 | l’OP rilascerà  |                 |
-|                 |                 | oltre           |                 |
-|                 |                 | all’\ *access   |                 |
-|                 |                 | token* anche un |                 |
-|                 |                 | *refresh token* |                 |
-|                 |                 | necessario per  |                 |
-|                 |                 | instaurare      |                 |
-|                 |                 | sessioni lunghe |                 |
-|                 |                 | revocabili.     |                 |
-|                 |                 | L’uso di questo |                 |
-|                 |                 | valore è        |                 |
-|                 |                 | consentito solo |                 |
-|                 |                 | se il client è  |                 |
-|                 |                 | un’applicazione |                 |
-|                 |                 | per dispositivi |                 |
-|                 |                 | mobili che      |                 |
-|                 |                 | intenda offrire |                 |
-|                 |                 | all’utente una  |                 |
-|                 |                 | sessione lunga  |                 |
-|                 |                 | revocabile.     |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **acr_values**  | Valori di       | https://www.spi | SI              |
-|                 | riferimento     | d.gov.it/SpidL1 |                 |
-|                 | della classe di |                 |                 |
-|                 | contesto        | https://www.spi |                 |
-|                 | dell’autenticaz | d.gov.it/SpidL2 |                 |
-|                 | ione            |                 |                 |
-|                 | richiesta.      | https://www.spi |                 |
-|                 | Stringa         | d.gov.it/SpidL3 |                 |
-|                 | separata da uno |                 |                 |
-|                 | spazio, che     |                 |                 |
-|                 | specifica i     |                 |                 |
-|                 | valori “acr”    |                 |                 |
-|                 | richiesti al    |                 |                 |
-|                 | server di       |                 |                 |
-|                 | autorizzazione  |                 |                 |
-|                 | per             |                 |                 |
-|                 | l'elaborazione  |                 |                 |
-|                 | della richiesta |                 |                 |
-|                 | di              |                 |                 |
-|                 | autenticazione, |                 |                 |
-|                 | con i valori    |                 |                 |
-|                 | visualizzati in |                 |                 |
-|                 | ordine di       |                 |                 |
-|                 | preferenza.     |                 |                 |
++-----------------+-----------------+------------------+----------------+
+| **Scope**       | Lista degli     |**openid**        | SI             |
+|                 | scope           | (obbligatorio).  |                |
+|                 | richiesti.      |                  |                |
+|                 |                 |**offline_access**|                | 
+|                 |                 | se specificato,  |                |
+|                 |                 | l’OP rilascerà   |                |
+|                 |                 | oltre            |                |
+|                 |                 | all’\ *access    |                |
+|                 |                 | token* anche un  |                |
+|                 |                 | *refresh token*  |                |
+|                 |                 | necessario per   |                |
+|                 |                 | instaurare       |                |
+|                 |                 | sessioni lunghe  |                |
+|                 |                 | revocabili.      |                |
+|                 |                 | L’uso di questo  |                |
+|                 |                 | valore è         |                |
+|                 |                 | consentito solo  |                |
+|                 |                 | se il client è   |                |
+|                 |                 | un’applicazione  |                |
+|                 |                 | per dispositivi  |                |
+|                 |                 | mobili che       |                |
+|                 |                 | intenda offrire  |                |
+|                 |                 | all’utente una   |                |
+|                 |                 | sessione lunga   |                |
+|                 |                 | revocabile.      |                |
++-----------------+-----------------+------------------+----------------+
++-----------------+-----------------+-------------------------------+---+
+| **acr_values**  | Valori di       |https://www.spid.gov.it/SpidL1 |SI |
+|                 | riferimento     |https://www.spid.gov.it/SpidL2 |   |
+|                 | della classe di |https://www.spid.gov.it/SpidL3 |   |
+|                 | contesto        |                               |   |
+|                 | dell’autenticaz |                               |   |
+|                 | ione            |                               |   |
+|                 | richiesta.      |                               |   |
+|                 | Stringa         |                               |   |
+|                 | separata da uno |                               |   |
+|                 | spazio, che     |                               |   |
+|                 | specifica i     |                               |   |
+|                 | valori “acr”    |                               |   |
+|                 | richiesti al    |                               |   |
+|                 | server di       |                               |   |
+|                 | autorizzazione  |                               |   |
+|                 | per             |                               |   |
+|                 | l'elaborazione  |                               |   |
+|                 | della richiesta |                               |   |
+|                 | di              |                               |   |
+|                 | autenticazione, |                               |   |
+|                 | con i valori    |                               |   |
+|                 | visualizzati in |                               |   |
+|                 | ordine di       |                               |   |
+|                 | preferenza.     |                               |   |
++-----------------+-----------------+-------------------------------+---+
 +-----------------+-----------------+-----------------+-----------------+
 | **Claims**      | Lista dei       | v. paragrafo    | SI              |
 |                 | claims          | 5.1             |                 |
@@ -241,12 +242,10 @@ definite dall’Agenzia per l’Italia Digitale.
 |                 | intellegibile   |                 |                 |
 |                 | ad altri.       |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| **response_mode | http://openid.n | form_post       | SI              |
-| **              | et/specs/oauth- |                 |                 |
-|                 | v2-form-post-re |                 |                 |
-|                 | sponse-mode-1_0 |                 |                 |
-|                 | .html#FormPostR |                 |                 |
-|                 | esponseMode     |                 |                 |
+|**response_mode**| Definisce la    | form_post       | SI              |
+|                 | modalità di     |                 |                 |
+|                 | risposta del    |                 |                 |
+|                 | Form*           |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | **ui_locales**  | Lingue          | Lista di codici | NO              |
 |                 | preferibili per | RFC5646         |                 |
@@ -263,20 +262,19 @@ definite dall’Agenzia per l’Italia Digitale.
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest      |
-|                                                                       |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2. |
-| 1.1                                                                   |
-|                                                                       |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.se |
-| ction.2.1                                                             |
-|                                                                       |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.se |
-| ction.2.4                                                             |
-|                                                                       |
-| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests      |
-+-----------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest                       |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1               |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1         |
+|                                                                                        |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4         |
+|                                                                                        |
+| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests                       |
+|                                                                                        |
+| *https://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html#FormPostesponseMode|
++----------------------------------------------------------------------------------------+
 
 .. toctree::
   :maxdepth: 3

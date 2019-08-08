@@ -29,9 +29,9 @@ tutti i token sono restituiti dal token endpoint.
 |                 |                 |                 | autenticarsi    |
 +-----------------+-----------------+-----------------+-----------------+
 | *2*             | **RP**          | **OP**          | Il Relying      |
-|                 |                 |                 | Party (RP)      |
-|                 |                 | **Authorization | prepara         |
-|                 |                 | server**        | un’authenticati |
+|                 |                 | **Authorization | Party (RP)      |
+|                 |                 | server**        | prepara         |
+|                 |                 |                 | un’authenticati |
 |                 |                 |                 | on              |
 |                 |                 |                 | request e la    |
 |                 |                 |                 | invia           |
@@ -44,11 +44,11 @@ tutti i token sono restituiti dal token endpoint.
 |                 |                 |                 | dall’utente     |
 +-----------------+-----------------+-----------------+-----------------+
 | *3*             | **OP**          | **Utente**      | L’OpendID       |
-|                 |                 |                 | Provider (OP)   |
-|                 | **Authorization |                 | richiede        |
-|                 | **              |                 | all’utente      |
+|                 | **Authorization |                 | Provider (OP)   |
+|                 | Server**        |                 | richiede        |
+|                 |                 |                 | all’utente      |
 |                 |                 |                 | l’inserimento   |
-|                 | **server**      |                 | delle           |
+|                 |                 |                 | delle           |
 |                 |                 |                 | credenziali,    |
 |                 |                 |                 | secondo il      |
 |                 |                 |                 | livello SPID    |
@@ -66,33 +66,33 @@ tutti i token sono restituiti dal token endpoint.
 |                 |                 |                 | (RP)            |
 +-----------------+-----------------+-----------------+-----------------+
 | *4*             | **OP**          | **RP**          | L’OpenID        |
-|                 |                 |                 | Provider        |
-|                 | **Authorization |                 | reindirizza     |
-|                 | **              |                 | l’utente verso  |
+|                 | **Authorization |                 | Provider        |
+|                 | Server**        |                 | reindirizza     |
+|                 |                 |                 | l’utente verso  |
 |                 |                 |                 | il Redirect URI |
-|                 | **server**      |                 | specificato dal |
+|                 |                 |                 | specificato dal |
 |                 |                 |                 | RP, passando un |
 |                 |                 |                 | authorization   |
 |                 |                 |                 | code            |
 +-----------------+-----------------+-----------------+-----------------+
 | *5*             | **RP**          | **OP**          | L’RP invia      |
-|                 |                 |                 | l’authorization |
-|                 |                 | **Token**       | code ricevuto   |
+|                 |                 | **Token         | l’authorization |
+|                 |                 | endpoint**      | code ricevuto   |
 |                 |                 |                 | al Token        |
-|                 |                 | **endpoint**    | endpoint        |
+|                 |                 |                 | endpoint        |
 |                 |                 |                 | dell’OP         |
 +-----------------+-----------------+-----------------+-----------------+
 | *6*             | **OP**          | **RP**          | L’OP Token      |
-|                 |                 |                 | endpoint        |
-|                 | **Token**       |                 | rilascia un ID  |
+|                 | **Token         |                 | endpoint        |
+|                 | endpoint**      |                 | rilascia un ID  |
 |                 |                 |                 | Token, un       |
-|                 | **endpoint**    |                 | Access token, e |
+|                 |                 |                 | Access token, e |
 |                 |                 |                 | se richiesto un |
 |                 |                 |                 | Refresh token   |
 +-----------------+-----------------+-----------------+-----------------+
-| *7*             | **RP**          | **UserInfo**    | L’RP valida     |
-|                 |                 |                 | l’ID token e    |
-|                 |                 | **endpoint**    | registra nella  |
+| *7*             | **RP**          | **UserInfo      | L’RP valida     |
+|                 |                 | endpoint**      | l’ID token e    |
+|                 |                 |                 | registra nella  |
 |                 |                 |                 | propria         |
 |                 |                 |                 | sessione tutti  |
 |                 |                 |                 | i token         |
@@ -109,10 +109,10 @@ tutti i token sono restituiti dal token endpoint.
 |                 |                 |                 | dell’OP         |
 +-----------------+-----------------+-----------------+-----------------+
 | *8*             | **OP**          | **RP**          | L’OP rilascia   |
-|                 |                 |                 | gli attributi   |
-|                 | **User**        |                 | richiesti       |
+|                 | **Userinfo      |                 | gli attributi   |
+|                 | endpoint**      |                 | richiesti       |
 |                 |                 |                 |                 |
-|                 | **endpoint**    |                 |                 |
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 
 |image1|
