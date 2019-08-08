@@ -10,7 +10,7 @@ che consente di identificare il RP che esegue la richiesta.
 **Esempio:**
 
 +-----------------------------------------------------------------------+
-||*POST https://op.spid.agid.gov.it/introspection?*                     |
+|| *POST https://op.spid.agid.gov.it/introspection?*                    |
 |                                                                       |
 || **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI  |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
