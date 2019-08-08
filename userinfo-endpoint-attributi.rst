@@ -14,18 +14,16 @@ Origin Resource Sharing (CORS) e/o altri metodi appropriati per
 consentire ai client Java Script di accedere all'endpoint.
 
 +------------------------------------------+
-| GET https://op.spid.agid.gov.it/userinfo |
-| Authorization: Bearer dC34Pf6kdG         |
+|| GET https://op.spid.agid.gov.it/userinfo|
+|| Authorization: Bearer dC34Pf6kdG        |
 +------------------------------------------+
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#UserInfo         |
-|                                                                       |
-| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.s |
-| ection.4                                                              |
-+-----------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#UserInfo                 |
+| https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.4 |
++-------------------------------------------------------------------------------+
 
 .. toctree::
   :maxdepth: 3
