@@ -14,7 +14,7 @@ Request.
 | | {                                                                     |
 | | "**iss**": "https://op.fornitore_identita.it",                        |
 | | "**aud**": "https://rp.fornitore_servizio.it",                        |
-| | "**ia t**": 1519032969,                                               |
+| | "**iat**": 1519032969,                                                |
 | | "**nbf**": 1519032969,                                                |
 | | "**exp**": 1519033149,                                                |
 | | "**sub**": "OP-1234567890",                                           |
