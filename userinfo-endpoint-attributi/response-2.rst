@@ -19,7 +19,7 @@ Request.
 | | "**exp**": 1519033149,                                                |
 | | "**sub**": "OP-1234567890",                                           |
 | | "**name**": "Mario",                                                  |
-| |"**https://attributes.spid.gov.it/familyName**": "Rossi",              |
+| | "**https://attributes.spid.gov.it/familyName**": "Rossi",             |
 | | "**https://attributes.spid.gov.it/fiscalNumber**": "MROXXXXXXXXXXXXX" |
 | | }                                                                     |
 +-------------------------------------------------------------------------+
