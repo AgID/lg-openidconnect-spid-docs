@@ -76,12 +76,12 @@ la validazione dell’ID Token.
 | **Nbf**               | Data/ora di inizio    || {                    |
 |                       | validità del token in || userinfo: {...}      |
 |                       | formato UTC. Deve     || id_token: {          |
-|                       | corrispondere con il  || acr: {...},          |
-|                       | valore di **iat**.    || nbf: { essential:    |
+|                       | corrispondere con il  ||  acr: {...},         |
+|                       | valore di **iat**.    ||  nbf: { essential:   |
 |                       |                       | true},                |
-|                       |                       || jti: { essential:    |
+|                       |                       ||  jti: { essential:   |
 |                       |                       | true }                |
-|                       |                       || }                    |
+|                       |                       ||  }                   |
 |                       |                       || }                    |
 +-----------------------+-----------------------+-----------------------+
 | **Exp**               | Data/ora di scadenza  |                       |
