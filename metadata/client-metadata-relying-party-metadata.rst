@@ -29,7 +29,7 @@ con alcuni campi in aggiunta.
 || "grant_types": ["authorization_code", "refresh_token"],               |
 || "client_name": "Agenzia per l'Italia Digitale",                       |
 || "client_name#en": "Agency for Digital Italy"                          |
-| }                                                                      |
+|| }                                                                     |
 +------------------------------------------------------------------------+
 
 +-----------------------------------+-----------------------------------+
