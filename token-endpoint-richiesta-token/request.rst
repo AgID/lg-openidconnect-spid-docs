@@ -132,8 +132,8 @@ Request
 |                 | corrente.       | **authorization |                 |
 |                 |                 | _code**         |                 |
 |                 |                 |                 |                 |
-|                 |                 | **refresh_token |                 |
-|                 |                 | **              |                 |
+|                 |                 |**refresh_token**|                 |
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 |**refresh_token**|                 |                 |Solo se          |
 |                 |                 |                 |**grant_type**   |
