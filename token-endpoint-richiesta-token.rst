@@ -17,17 +17,17 @@ vi sono due scenari distinti in cui il client chiama il Token Endpoint:
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| https://tools.ietf.org/html/rfc6749#section-3.2                       |
-|                                                                       |
-| http://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint    |
-|                                                                       |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2. |
-| 1.2                                                                   |
-|                                                                       |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.se |
-| ction.2.2                                                             |
-+-----------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+| https://tools.ietf.org/html/rfc6749#section-3.2                                |
+|                                                                                |
+| http://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint             |
+|                                                                                |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.2       |
+|                                                                                |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.2 |
+|                                                                                |
++--------------------------------------------------------------------------------+
 
 .. toctree::
   :maxdepth: 3
