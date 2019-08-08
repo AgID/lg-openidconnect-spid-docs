@@ -46,9 +46,9 @@ tutti i token sono restituiti dal token endpoint.
 | *3*             | **OP**          | **Utente**      | L’OpendID       |
 |                 |                 |                 | Provider (OP)   |
 |                 | **Authorization |                 | richiede        |
-|                 | **              |                 | all’utente      |
+|                 | Server**        |                 | all’utente      |
 |                 |                 |                 | l’inserimento   |
-|                 | **server**      |                 | delle           |
+|                 |                 |                 | delle           |
 |                 |                 |                 | credenziali,    |
 |                 |                 |                 | secondo il      |
 |                 |                 |                 | livello SPID    |
