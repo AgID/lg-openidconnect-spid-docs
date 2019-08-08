@@ -27,7 +27,7 @@ definite dall’Agenzia per l’Italia Digitale.
 
 +-----------------------------------------------------------------------+
 | {                                                                     |
-| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                    |
+| | **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it                   |
 | | **code_challenge**\ =qWJlMe0xdbXrKxTm72EpH659bUxAxw80               |
 | | **code_challenge_method**\ =S256                                    |
 | | **nonce**\ =MBzGqyf9QytD28eupyWhSqMj78WNqpc2                        |
@@ -48,7 +48,7 @@ definite dall’Agenzia per l’Italia Digitale.
 | | },                                                                  |
 | | }                                                                   |
 | | **state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        |
-| | }                                                                     |
+| | }                                                                   |
 +-----------------------------------------------------------------------+
 
 +-----------------+-----------------+-----------------+-----------------+
