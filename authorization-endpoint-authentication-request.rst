@@ -35,14 +35,14 @@ definite dall’Agenzia per l’Italia Digitale.
 | | **redirect_uri**\ =https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F |
 | | **response_type**\ =code                                            |
 | | **scope**\ =openid                                                  |
-| | **acr_values**\ =\ `https://www.spid.gov.it/SpidL1                  |
+| | **acr_values**\ =\ https://www.spid.gov.it/SpidL1                   |
 | | https://www.spid.gov.it/SpidL2                                      |
 | | **claims**\ ={                                                      |
 | | **"id_token"**:{                                                    |
-| | "nbf": { essential: true},                                          |
-| | "jti": { essential: true }                                          |
+| | **"nbf"**: { essential: true},                                      |
+| | **"jti"**: { essential: true }                                      |
 | | },                                                                  |
-| | **"userinfo":{                                                      |
+| | **"userinfo"**:{                                                    |
 | | "https://attributes.spid.gov.it/name": null,                        |
 | | "https://attributes.spid.gov.it/familyName": null                   |
 | | },                                                                  |
