@@ -201,7 +201,7 @@ con alcuni campi in aggiunta.
 | alues_supported**                 | cifratura (**enc**) supportati                  |
 |                                   | per il JWS dei Request Object,                  |
 |                                   | come definito in rfc7518 (5.1):                 |
-|                                   | https://tools.ietf.org/html/rfc7518#section-5.1                    |
+|                                   | https://tools.ietf.org/html/rfc7518#section-5.1 |
 +-----------------------------------+-------------------------------------------------+
 | **id_token_signing_alg_values_sup | Array contenente gli algoritmi di               |
 | ported**                          | firma supportati per il JWS                     |
