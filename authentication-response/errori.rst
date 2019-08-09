@@ -9,12 +9,9 @@ presente nel client metadata), con i seguenti parametri.
 
 **Esempio:**
 
-+-------------------------------------------------+
-| | https://op.spid.agid.gov.it/resp?             |
-| | **error**\ =invalid_request&                  |
-| | **error_description**\ =request%20malformata& |
-| | **state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd  |
-+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+| https://op.spid.agid.gov.it/resp?**error**=invalid_request&**error_description**=request%20malformata&**state**=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd |
++--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
@@ -47,31 +44,31 @@ presente nel client metadata), con i seguenti parametri.
 
 Di seguito i codici di errore:
 
-+-----------------------------------+-----------------------------------+
-| **Scenario**                      | **Codice errore**                 |
-+-----------------------------------+-----------------------------------+
-| L’OP ha negato l’accesso a causa  | **access_denied**                 |
-| di credenziali non valide o non   |                                   |
-| adeguate al livello SPID          |                                   |
-| richiesto.                        |                                   |
-+-----------------------------------+-----------------------------------+
-| Il client_id indicato nella       | **invalid_client**                |
-| richiesta non è riconosciuto.     |                                   |
-+-----------------------------------+-----------------------------------+
-| La richiesta non è valida a causa | **invalid_request**               |
-| della mancanza o della non        |                                   |
-| correttezza di uno o più          |                                   |
-| parametri.                        |                                   |
-+-----------------------------------+-----------------------------------+
-| Sono stati richiesti degli scope  | **invalid_scope**                 |
-| non validi.                       |                                   |
-+-----------------------------------+-----------------------------------+
-| L’OP ha riscontrato un problema   | **server_error**                  |
-| interno.                          |                                   |
-+-----------------------------------+-----------------------------------+
-| L’OP ha riscontrato un problema   | **temporarily_unavailable**       |
-| interno temporaneo.               |                                   |
-+-----------------------------------+-----------------------------------+
++-----------------------------------+-----------------------------+
+| **Scenario**                      | **Codice errore**           |
++-----------------------------------+-----------------------------+
+| L’OP ha negato l’accesso a causa  | **access_denied**           |
+| di credenziali non valide o non   |                             |
+| adeguate al livello SPID          |                             |
+| richiesto.                        |                             |
++-----------------------------------+-----------------------------+
+| Il client_id indicato nella       | **invalid_client**          |
+| richiesta non è riconosciuto.     |                             |
++-----------------------------------+-----------------------------+
+| La richiesta non è valida a causa | **invalid_request**         |
+| della mancanza o della non        |                             |
+| correttezza di uno o più          |                             |
+| parametri.                        |                             |
++-----------------------------------+-----------------------------+
+| Sono stati richiesti degli scope  | **invalid_scope**           |
+| non validi.                       |                             |
++-----------------------------------+-----------------------------+
+| L’OP ha riscontrato un problema   | **server_error**            |
+| interno.                          |                             |
++-----------------------------------+-----------------------------+
+| L’OP ha riscontrato un problema   | **temporarily_unavailable** |
+| interno temporaneo.               |                             |
++-----------------------------------+-----------------------------+
 
 **Riferimenti:**
 
