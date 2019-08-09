@@ -107,180 +107,171 @@ con alcuni campi in aggiunta.
     ]
  }
 
-+-----------------------------------+-----------------------------------+
-| **Elemento**                      | **Descrizione**                   |
-+-----------------------------------+-----------------------------------+
-| **Issuer**                        | L’identificatore dell’OP (con     |
-|                                   | schema HTTPS), tipicamente l’URL  |
-|                                   | base. Deve essere identico al     |
-|                                   | valore di iss negli ID Token      |
-|                                   | prodotti dall’OP. L’issuer        |
-|                                   | corrisponde al entityID che viene |
-|                                   | utilizzato in SAML e che          |
-|                                   | rappresenta la chiave univoca con |
-|                                   | cui è identificato il fornitore   |
-|                                   | di identità.                      |
-+-----------------------------------+-----------------------------------+
-| **authorization_endpoint**        | URL dell’Authorization Endpoint,  |
-|                                   | al quale il Client viene          |
-|                                   | reindirizzato per iniziare il     |
-|                                   | flusso di autenticazione.         |
-+-----------------------------------+-----------------------------------+
-| **token_endpoint**                | URL del Token Endpoin, che il RP  |
-|                                   | deve chiamare per scambiare il    |
-|                                   | codice ricevuto al termine        |
-|                                   | dell’autenticazione con un        |
-|                                   | access_token.                     |
-+-----------------------------------+-----------------------------------+
-| **userinfo_endpoint**             | URL dello UserInfo Endpoint, che  |
-|                                   | il RP può chiamare per ottenere i |
-|                                   | claim autorizzati dall’utente.    |
-+-----------------------------------+-----------------------------------+
-| **introspection_endpoint**        | URL dell’Introspection Endpoint   |
-|                                   | (v. più avanti) che restituisce   |
-|                                   | informazioni su un token.         |
-+-----------------------------------+-----------------------------------+
-| **revocation_endpoint**           | URL del Revocation Endpoint (v.   |
-|                                   | più avanti) che revoca un         |
-|                                   | *refresh token* o un *access      |
-|                                   | token* già rilasciato al RP       |
-|                                   | chiamante.                        |
-+-----------------------------------+-----------------------------------+
-| **jwks_uri**                      | Url del registry dove è           |
-|                                   | localizzato il jwks che è un json |
-|                                   | array composto dai seguenti       |
-|                                   | parametri:                        |
-|                                   |                                   |
-|                                   | -  *kty:* famiglia dell’algoritmo |
-|                                   |    crittografico utilizzato       |
-|                                   |                                   |
-|                                   | -  *alg:* algoritmo utilizzato    |
-|                                   |                                   |
-|                                   | -  *use:* utilizzo della chiave   |
-|                                   |    pubblica per firma (sig) o     |
-|                                   |    encryption (enc)               |
-|                                   |                                   |
-|                                   | -  *kid:* identificatore univoco  |
-|                                   |    della chiave                   |
-|                                   |                                   |
-|                                   | -  *n:* modulus (standard pem)    |
-|                                   |                                   |
-|                                   | -  *e:* esponente (standard pem)  |
-+-----------------------------------+-----------------------------------+
-| **provider_name**                 | Nome dell’OpenID Provider. Può    |
-|                                   | essere specificato in più lingue  |
-|                                   | apponendo al nome dell’elemento   |
-|                                   | il suffisso "#" seguito dal       |
-|                                   | codice RFC5646. Un nome di        |
-|                                   | default senza indicazione della   |
-|                                   | lingua è sempre presente.         |
-+-----------------------------------+-----------------------------------+
-| **provider_url**                  | URL dell’OpenID Provider. Può     |
-|                                   | essere specificato in più lingue  |
-|                                   | apponendo al nome dell’elemento   |
-|                                   | il suffisso "#" seguito dal       |
-|                                   | codice RFC5646. Un valore di      |
-|                                   | default senza indicazione della   |
-|                                   | lingua è sempre presente.         |
-+-----------------------------------+-----------------------------------+
-| **request_object_signing_alg_valu | Array contenente gli algoritmi di |
-| es_supported**                    | firma supportati per il JWS dei   |
-|                                   | Request Object. L’OP deve         |
-|                                   | supportare RS256 e può supportare |
-|                                   | anche altri algoritmi definiti in |
-|                                   | rfc7518 (3.1):                    |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-3.1                    |
-+-----------------------------------+-----------------------------------+
-| **request_object_encryption_alg_v | Array contenente gli algoritmi di |
-| alues_supported**                 | cifratura (**alg**) supportati    |
-|                                   | per il JWS dei Request Object,    |
-|                                   | come definito in rfc7518 (4.1):   |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-4.1                    |
-+-----------------------------------+-----------------------------------+
-| **request_object_encryption_enc_v | Array contenente gli algoritmi di |
-| alues_supported**                 | cifratura (**enc**) supportati    |
-|                                   | per il JWS dei Request Object,    |
-|                                   | come definito in rfc7518 (5.1):   |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-5.1                    |
-+-----------------------------------+-----------------------------------+
-| **id_token_signing_alg_values_sup | Array contenente gli algoritmi di |
-| ported**                          | firma supportati per il JWS       |
-|                                   | dell’ID Token. L’OP deve          |
-|                                   | supportare RS256 e può supportare |
-|                                   | anche altri algoritmi definiti in |
-|                                   | rfc7518 (3.1):                    |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-3.1                    |
-+-----------------------------------+-----------------------------------+
-| **id_token_encryption_alg_values_ | Array contenente gli algoritmi di |
-| supported**                       | cifratura (**alg**) supportati    |
-|                                   | per il JWS dell’ID Token, come    |
-|                                   | definito in rfc7518 (4.1):        |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-4.1                    |
-+-----------------------------------+-----------------------------------+
-| **id_token_encryption_enc_values_ | Array contenente gli algoritmi di |
-| supported**                       | cifratura (**enc**) supportati    |
-|                                   | per il JWS dell’ID Token, come    |
-|                                   | definito in rfc7518 (5.1):        |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-5.1                    |
-+-----------------------------------+-----------------------------------+
-| **userinfo_signing_alg_values_sup | Array contenente gli algoritmi di |
-| ported**                          | firma supportati per il JWS       |
-|                                   | dell’UserInfo Endpoint. L’OP deve |
-|                                   | supportare RS256 e può supportare |
-|                                   | anche altri algoritmi definiti in |
-|                                   | rfc7518 (3.1):                    |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-3.1                    |
-+-----------------------------------+-----------------------------------+
-| **userinfo_encryption_alg_values_ | Array contenente gli algoritmi di |
-| supported**                       | cifratura (**alg**) supportati    |
-|                                   | per il JWE dell’UserInfo          |
-|                                   | Endpoint, come definito in        |
-|                                   | rfc7518 (4.1):                    |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-4.1                    |
-+-----------------------------------+-----------------------------------+
-| **userinfo_encryption_enc_values_ | Array contenente gli algoritmi di |
-| supported**                       | cifratura (**enc**) supportati    |
-|                                   | per il JWE dell’UserInfo          |
-|                                   | Endpoint, come definito in        |
-|                                   | rfc7518 (5.1):                    |
-|                                   | https://tools.ietf.org/html/rfc75 |
-|                                   | 18#section-5.1                    |
-+-----------------------------------+-----------------------------------+
-| **token_endpoint_auth_methods_sup | Array contenente i metodi di      |
-| ported**                          | autenticazione supportati dal     |
-|                                   | Token Endpoint. Deve essere       |
-|                                   | presente solo il valore           |
-|                                   | **private_key_jwt**               |
-+-----------------------------------+-----------------------------------+
-| **acr_values_supported**          | Array contenente i livelli SPID   |
-|                                   | supportati dall’OP, rappresentati |
-|                                   | come URI. Può contenere uno o più |
-|                                   | valori tra i seguenti:            |
-|                                   |                                   |
-|                                   | - https://www.spid.gov.it/SpidL1  |
-|                                   |                                   |
-|                                   | - https://www.spid.gov.it/SpidL2  |
-|                                   |                                   |
-|                                   | - https://www.spid.gov.it/SpidL3  |
-+-----------------------------------+-----------------------------------+
-| **request_parameter_supported**   | Valore booleano che indica se il  |
-|                                   | parametro **request** è           |
-|                                   | supportato dall’OP. Deve essere   |
-|                                   | obbligatoriamente **true**.       |
-+-----------------------------------+-----------------------------------+
-| **subject_types_supported**       | Array contenente i tipi di        |
-|                                   | Subject Identifier supportati     |
-|                                   | dall’OP. Deve contenere il solo   |
-|                                   | valore **public**.                |
-+-----------------------------------+-----------------------------------+
++-----------------------------------+-------------------------------------------------+
+| **Elemento**                      | **Descrizione**                                 |
++-----------------------------------+-------------------------------------------------+
+| **Issuer**                        | L’identificatore dell’OP (con                   |
+|                                   | schema HTTPS), tipicamente l’URL                |
+|                                   | base. Deve essere identico al                   |
+|                                   | valore di iss negli ID Token                    |
+|                                   | prodotti dall’OP. L’issuer                      |
+|                                   | corrisponde al entityID che viene               |
+|                                   | utilizzato in SAML e che                        |
+|                                   | rappresenta la chiave univoca con               |
+|                                   | cui è identificato il fornitore                 |
+|                                   | di identità.                                    |
++-----------------------------------+-------------------------------------------------+
+| **authorization_endpoint**        | URL dell’Authorization Endpoint,                |
+|                                   | al quale il Client viene                        |
+|                                   | reindirizzato per iniziare il                   |
+|                                   | flusso di autenticazione.                       |
++-----------------------------------+-------------------------------------------------+
+| **token_endpoint**                | URL del Token Endpoin, che il RP                |
+|                                   | deve chiamare per scambiare il                  |
+|                                   | codice ricevuto al termine                      |
+|                                   | dell’autenticazione con un                      |
+|                                   | access_token.                                   |
++-----------------------------------+-------------------------------------------------+
+| **userinfo_endpoint**             | URL dello UserInfo Endpoint, che                |
+|                                   | il RP può chiamare per ottenere i               |
+|                                   | claim autorizzati dall’utente.                  |
++-----------------------------------+-------------------------------------------------+
+| **introspection_endpoint**        | URL dell’Introspection Endpoint                 |
+|                                   | (v. più avanti) che restituisce                 |
+|                                   | informazioni su un token.                       |
++-----------------------------------+-------------------------------------------------+
+| **revocation_endpoint**           | URL del Revocation Endpoint (v.                 |
+|                                   | più avanti) che revoca un                       |
+|                                   | *refresh token* o un *access                    |
+|                                   | token* già rilasciato al RP                     |
+|                                   | chiamante.                                      |
++-----------------------------------+-------------------------------------------------+
+| **jwks_uri**                      | Url del registry dove è                         |
+|                                   | localizzato il jwks che è un json               |
+|                                   | array composto dai seguenti                     |
+|                                   | parametri:                                      |
+|                                   |                                                 |
+|                                   | -  *kty:* famiglia dell’algoritmo               |
+|                                   |    crittografico utilizzato                     |
+|                                   |                                                 |
+|                                   | -  *alg:* algoritmo utilizzato                  |
+|                                   |                                                 |
+|                                   | -  *use:* utilizzo della chiave                 |
+|                                   |    pubblica per firma (sig) o                   |
+|                                   |    encryption (enc)                             |
+|                                   |                                                 |
+|                                   | -  *kid:* identificatore univoco                |
+|                                   |    della chiave                                 |
+|                                   |                                                 |
+|                                   | -  *n:* modulus (standard pem)                  |
+|                                   |                                                 |
+|                                   | -  *e:* esponente (standard pem)                |
++-----------------------------------+-------------------------------------------------+
+| **provider_name**                 | Nome dell’OpenID Provider. Può                  |
+|                                   | essere specificato in più lingue                |
+|                                   | apponendo al nome dell’elemento                 |
+|                                   | il suffisso "#" seguito dal                     |
+|                                   | codice RFC5646. Un nome di                      |
+|                                   | default senza indicazione della                 |
+|                                   | lingua è sempre presente.                       |
++-----------------------------------+-------------------------------------------------+
+| **provider_url**                  | URL dell’OpenID Provider. Può                   |
+|                                   | essere specificato in più lingue                |
+|                                   | apponendo al nome dell’elemento                 |
+|                                   | il suffisso "#" seguito dal                     |
+|                                   | codice RFC5646. Un valore di                    |
+|                                   | default senza indicazione della                 |
+|                                   | lingua è sempre presente.                       |
++-----------------------------------+-------------------------------------------------+
+| **request_object_signing_alg_valu | Array contenente gli algoritmi di               |
+| es_supported**                    | firma supportati per il JWS dei                 |
+|                                   | Request Object. L’OP deve                       |
+|                                   | supportare RS256 e può supportare               |
+|                                   | anche altri algoritmi definiti in               |
+|                                   | rfc7518 (3.1):                                  |
+|                                   | https://tools.ietf.org/html/rfc7518#section-3.1 |
++-----------------------------------+-------------------------------------------------+
+| **request_object_encryption_alg_v | Array contenente gli algoritmi di               |
+| alues_supported**                 | cifratura (**alg**) supportati                  |
+|                                   | per il JWS dei Request Object,                  |
+|                                   | come definito in rfc7518 (4.1):                 |
+|                                   | https://tools.ietf.org/html/rfc7518#section-4.1 |
++-----------------------------------+-------------------------------------------------+
+| **request_object_encryption_enc_v | Array contenente gli algoritmi di               |
+| alues_supported**                 | cifratura (**enc**) supportati                  |
+|                                   | per il JWS dei Request Object,                  |
+|                                   | come definito in rfc7518 (5.1):                 |
+|                                   | https://tools.ietf.org/html/rfc7518#section-5.1                    |
++-----------------------------------+-------------------------------------------------+
+| **id_token_signing_alg_values_sup | Array contenente gli algoritmi di               |
+| ported**                          | firma supportati per il JWS                     |
+|                                   | dell’ID Token. L’OP deve                        |
+|                                   | supportare RS256 e può supportare               |
+|                                   | anche altri algoritmi definiti in               |
+|                                   | rfc7518 (3.1):                                  |
+|                                   | https://tools.ietf.org/html/rfc7518#section-3.1 |
++-----------------------------------+-------------------------------------------------+
+| **id_token_encryption_alg_values_ | Array contenente gli algoritmi di               |
+| supported**                       | cifratura (**alg**) supportati                  |
+|                                   | per il JWS dell’ID Token, come                  |
+|                                   | definito in rfc7518 (4.1):                      |
+|                                   | https://tools.ietf.org/html/rfc7518#section-4.1 |
++-----------------------------------+-------------------------------------------------+
+| **id_token_encryption_enc_values_ | Array contenente gli algoritmi di               |
+| supported**                       | cifratura (**enc**) supportati                  |
+|                                   | per il JWS dell’ID Token, come                  |
+|                                   | definito in rfc7518 (5.1):                      |
+|                                   | https://tools.ietf.org/html/rfc7518#section-5.1 |
++-----------------------------------+-------------------------------------------------+
+| **userinfo_signing_alg_values_sup | Array contenente gli algoritmi di               |
+| ported**                          | firma supportati per il JWS                     |
+|                                   | dell’UserInfo Endpoint. L’OP deve               |
+|                                   | supportare RS256 e può supportare               |
+|                                   | anche altri algoritmi definiti in               |
+|                                   | rfc7518 (3.1):                                  |
+|                                   | https://tools.ietf.org/html/rfc7518#section-3.1 |
++-----------------------------------+-------------------------------------------------+
+| **userinfo_encryption_alg_values_ | Array contenente gli algoritmi di               |
+| supported**                       | cifratura (**alg**) supportati                  |
+|                                   | per il JWE dell’UserInfo                        |
+|                                   | Endpoint, come definito in                      |
+|                                   | rfc7518 (4.1):                                  |
+|                                   | https://tools.ietf.org/html/rfc7518#section-4.1 |
++-----------------------------------+-------------------------------------------------+
+| **userinfo_encryption_enc_values_ | Array contenente gli algoritmi di               |
+| supported**                       | cifratura (**enc**) supportati                  |
+|                                   | per il JWE dell’UserInfo                        |
+|                                   | Endpoint, come definito in                      |
+|                                   | rfc7518 (5.1):                                  |
+|                                   | https://tools.ietf.org/html/rfc7518#section-5.1 |
++-----------------------------------+-------------------------------------------------+
+| **token_endpoint_auth_methods_sup | Array contenente i metodi di                    |
+| ported**                          | autenticazione supportati dal                   |
+|                                   | Token Endpoint. Deve essere                     |
+|                                   | presente solo il valore                         |
+|                                   | **private_key_jwt**                             |
++-----------------------------------+-------------------------------------------------+
+| **acr_values_supported**          | Array contenente i livelli SPID                 |
+|                                   | supportati dall’OP, rappresentati               |
+|                                   | come URI. Può contenere uno o più               |
+|                                   | valori tra i seguenti:                          |
+|                                   |                                                 |
+|                                   | - https://www.spid.gov.it/SpidL1                |
+|                                   |                                                 |
+|                                   | - https://www.spid.gov.it/SpidL2                |
+|                                   |                                                 |
+|                                   | - https://www.spid.gov.it/SpidL3                |
++-----------------------------------+-------------------------------------------------+
+| **request_parameter_supported**   | Valore booleano che indica se il                |
+|                                   | parametro **request** è                         |
+|                                   | supportato dall’OP. Deve essere                 |
+|                                   | obbligatoriamente **true**.                     |
++-----------------------------------+-------------------------------------------------+
+| **subject_types_supported**       | Array contenente i tipi di                      |
+|                                   | Subject Identifier supportati                   |
+|                                   | dall’OP. Deve contenere il solo                 |
+|                                   | valore **public**.                              |
++-----------------------------------+-------------------------------------------------+
 
 **Riferimenti**
 
