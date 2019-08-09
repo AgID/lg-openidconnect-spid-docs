@@ -7,30 +7,32 @@ con alcuni campi in aggiunta.
 
 **Esempio:**
 
-+------------------------------------------------------------------------+
-|| {                                                                     |
-|| "client_id": "https://rp.spid.agid.gov.it",                           |
-|| "redirect_uris": [                                                    |
-|| "https://rp.spid.agid.gov.it/callback1/",                             |
-|| "https://rp.spid.agid.gov.it/callback2/"                              |
-|| ],                                                                    |
-|| "jwks_uri": "https://registry.spid.gov.it/...",                       |
-|| "jwks": {"keys": [{                                                   |
-|| "kty": "RSA",                                                         |
-|| "alg": "RS256",                                                       |
-|| "use": "sig",                                                         |
-|| "kid": "e27671d73a2605ccd454413c4c94e25b3f66cdea",                    |
-|| "n":                                                                  |
-| "vmyoDT6ND_YJa1ItdvULuTJr2pw4MvN3Z5kmSiJBm9glVoakcDEBGF4b5c7WDh2P..."  |
-| ,                                                                      |
-|| "e": "ABAB"                                                           |
-|| }]},                                                                  |
-|| "response_types": ["code"],                                           |
-|| "grant_types": ["authorization_code", "refresh_token"],               |
-|| "client_name": "Agenzia per l'Italia Digitale",                       |
-|| "client_name#en": "Agency for Digital Italy"                          |
-|| }                                                                     |
-+------------------------------------------------------------------------+
+.. code-block:: json
+
+ {
+   "client_id": "https://rp.spid.agid.gov.it",
+   "redirect_uris": [
+     "https://rp.spid.agid.gov.it/callback1/",
+     "https://rp.spid.agid.gov.it/callback2/"
+   ],
+   "jwks_uri": "https://registry.spid.gov.it/...",
+   "jwks": {
+     "keys": [
+      {
+       "kty": "RSA",
+       "alg": "RS256",
+       "use": "sig",
+       "kid": "e27671d73a2605ccd454413c4c94e25b3f66cdea",
+       "n": "vmyoDT6ND_YJa1ItdvULuTJr2pw4MvN3Z5kmSiJBm9glVoakcDEBGF4b5c7WDh2P...",
+       "e": "ABAB"
+      }
+     ]
+   },
+   "response_types": ["code"],
+   "grant_types": ["authorization_code", "refresh_token"],
+   "client_name": "Agenzia per l'Italia Digitale",
+   "client_name#en": "Agency for Digital Italy"
+ }
 
 +-----------------------------------+-----------------------------------+
 | **Elemento**                      | **Descrizione**                   |
@@ -110,7 +112,7 @@ con alcuni campi in aggiunta.
 
 **Riferimenti**
 
-+-----------------------------------------------------------------------+
-| https://openid.net/specs/openid-connect-registration-1_0.html#ClientM |
-| etadata                                                               |
-+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+| https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata |                                                               
++------------------------------------------------------------------------------+
+      
