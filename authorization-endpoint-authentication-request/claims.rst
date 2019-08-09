@@ -10,14 +10,14 @@ momento della chiamata allo UserInfo Endpoint.
 .. code-block:: json
 
   {
-         "userinfo": 
-           {
-            "https://attributes.spid.gov.it/familyName": 
-             {
-              "essential": true
-             }
-           },
-        }                                                             
+   "userinfo": 
+    {
+     "https://attributes.spid.gov.it/familyName": 
+      {
+       "essential": true
+      }
+    },
+  }                                                             
 
 Se il Relying Party è privato, gli OpenID Provider devono controllare
 che gli attributi richiesti rientrino tra quelli che essi, in base alla
