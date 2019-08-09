@@ -12,16 +12,15 @@ Access Token e ID Token devono essere formati secondo le indicazioni
 dello standard “International Government Assurance Profile (iGov) for
 OAuth 2.0 - Draft 03, paragrafo 3.2.1, “JWT Bearer Tokens”.
 
-+-----------------------------------------------------------------------+
-|| {                                                                    |
-|| "**access_token**": "dC34Pf6kdG...",                                 |
-|| "**token_type**": "Bearer",                                          |
-|| "**refresh_token**": "wJ848BcyLP...",                                |
-|| "**expires_in**": 1800,                                              |
-|| "**id_token**":                                                      |
-| "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."         |
-|| }                                                                    |
-+-----------------------------------------------------------------------+
+.. code-block:: json
+
+ { 
+  "access_token": "dC34Pf6kdG...",
+  "token_type": "Bearer",
+  "refresh_token": "wJ848BcyLP...",
+  "expires_in": 1800,
+  "id_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY..."
+ }
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
