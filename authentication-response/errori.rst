@@ -9,9 +9,12 @@ presente nel client metadata), con i seguenti parametri.
 
 **Esempio:**
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-| https://op.spid.agid.gov.it/resp?**error**=invalid_request&**error_description**=request%20malformata&**state**=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd |
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------+
+| https://op.spid.agid.gov.it/resp?            |   
+|  **error**=invalid_request&                  |
+|  **error_description**=request%20malformata& |
+|  **state**=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd  |
++----------------------------------------------+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
