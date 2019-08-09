@@ -10,19 +10,19 @@ Request.
 
 **Esempio:**
 
-+-------------------------------------------------------------------------+
-| | {                                                                     |
-| | "**iss**": "https://op.fornitore_identita.it",                        |
-| | "**aud**": "https://rp.fornitore_servizio.it",                        |
-| | "**iat**": 1519032969,                                                |
-| | "**nbf**": 1519032969,                                                |
-| | "**exp**": 1519033149,                                                |
-| | "**sub**": "OP-1234567890",                                           |
-| | "**https://attributes.spid.gov.it/name**": "Mario",                   |
-| | "**https://attributes.spid.gov.it/familyName**": "Rossi",             |
-| | "**https://attributes.spid.gov.it/fiscalNumber**": "MROXXXXXXXXXXXXX" |
-| | }                                                                     |
-+-------------------------------------------------------------------------+
+.. code-block:: json
+
+ {                                                                     
+   "**iss**": "https://op.fornitore_identita.it",                         
+   "**aud**": "https://rp.fornitore_servizio.it",                         
+   "**iat**": 1519032969,                                                 
+   "**nbf**": 1519032969,                                                 
+   "**exp**": 1519033149,                                                 
+   "**sub**": "OP-1234567890",                                            
+   "**https://attributes.spid.gov.it/name**": "Mario",                    
+   "**https://attributes.spid.gov.it/familyName**": "Rossi",              
+   "**https://attributes.spid.gov.it/fiscalNumber**": "MROXXXXXXXXXXXXX"  
+ }                                                                      
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
