@@ -4,11 +4,12 @@ Response
 Se l’autenticazione è avvenuta con successo, l’OpenID Provider (OP)
 Authorization server, reindizza l’utente con i seguenti parametri:
 
-+---------------------------------------------+
-| https://op.spid.agid.gov.it/resp?           | 
-|| **code**=usDwMnEzJPpG5oaV8x3j&             | 
-|| **state**=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd |
-+---------------------------------------------+
++-----------------------------------------------+
+|| https://op.spid.agid.gov.it/resp?            | 
+|| **code**\ =usDwMnEzJPpG5oaV8x3j&             | 
+|| **state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd |
++-----------------------------------------------+
+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
