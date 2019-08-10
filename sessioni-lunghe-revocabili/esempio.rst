@@ -167,20 +167,17 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 
 **Riferimenti:**
 
-+-----------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest      |
-|                                                                       |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2. |
-| 1.1                                                                   |
-|                                                                       |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.se |
-| ction.2.1                                                             |
-|                                                                       |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.se |
-| ction.2.4                                                             |
-|                                                                       |
-| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests      |
-+-----------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
+|                                                                                |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
+|                                                                                |
+| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
++--------------------------------------------------------------------------------+
 
 **Esempio Refresh (chiamata HTTP):**
 
