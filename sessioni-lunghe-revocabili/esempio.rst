@@ -67,190 +67,103 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
  }                                                                     
 
 
-+-----------------+-----------------+-----------------+-----------------+
-| **Parametro**   | **Descrizione** | **Valori        | **Obbligatorio* |
-|                 |                 | ammessi**       | *               |
-+-----------------+-----------------+-----------------+-----------------+
-| **client_id**   | URI che         | Deve            | SI              |
-|                 | identifica      | corrispondere   |                 |
-|                 | univocamente il | ad un valore    |                 |
-|                 | RP come da      | nel Registro    |                 |
-|                 | Registro SPID.  | SPID.           |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Un challenge    | V. paragrafo    | SI              |
-| e**             | per PKCE da     | 6.1             |                 |
-|                 | riportare anche | "Generazione    |                 |
-|                 | nella           | del             |                 |
-|                 | successiva      | code_challenge  |                 |
-|                 | richiesta al    | per PKCE"       |                 |
-|                 | Token endpoint. |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **code_challeng | Metodo di       | È obbligatorio  | SI              |
-| e_method**      | costruzione del | specificare il  |                 |
-|                 | challenge PKCE. | valore **S256** |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Nonce**       | Valore che      | Stringa di      | SI              |
-|                 | serve ad        | almeno 32       |                 |
-|                 | evitare         | caratteri       |                 |
-|                 | attacchi Reply, | alfanumerici.   |                 |
-|                 | generato        |                 |                 |
-|                 | casualmente e   |                 |                 |
-|                 | non prevedibile |                 |                 |
-|                 | da terzi.       |                 |                 |
-|                 | Questo valore   |                 |                 |
-|                 | sarà restituito |                 |                 |
-|                 | nell’ID Token   |                 |                 |
-|                 | fornito dal     |                 |                 |
-|                 | Token Endpoint, |                 |                 |
-|                 | in modo da      |                 |                 |
-|                 | consentire al   |                 |                 |
-|                 | client di       |                 |                 |
-|                 | verificare che  |                 |                 |
-|                 | sia uguale a    |                 |                 |
-|                 | quello inviato  |                 |                 |
-|                 | nella richiesta |                 |                 |
-|                 | di              |                 |                 |
-|                 | autenticazione. |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Prompt**      | Definisce se    | **consent**:    | SI              |
-|                 | l’OP deve       | l’OP chiederà   |                 |
-|                 | occuparsi di    | le credenziali  |                 |
-|                 | eseguire una    | di              |                 |
-|                 | richiesta di    | autenticazione  |                 |
-|                 | autenticazione  | all’utente (ma  |                 |
-|                 | all’utente o    | solo se non è   |                 |
-|                 | meno.           | già attiva una  |                 |
-|                 |                 | sessione di     |                 |
-|                 |                 | Single Sign-On) |                 |
-|                 |                 | e               |                 |
-|                 |                 | successivamente |                 |
-|                 |                 | chiederà il     |                 |
-|                 |                 | consenso al     |                 |
-|                 |                 | trasferimento   |                 |
-|                 |                 | degli attributi |                 |
-|                 |                 | (valore         |                 |
-|                 |                 | consigliato)    |                 |
-|                 |                 |                 |                 |
-|                 |                 | **consent       |                 |
-|                 |                 | login:** l’OP   |                 |
-|                 |                 | chiederà sempre |                 |
-|                 |                 | le credenziali  |                 |
-|                 |                 | di              |                 |
-|                 |                 | autenticazione  |                 |
-|                 |                 | all’utente e    |                 |
-|                 |                 | successivamente |                 |
-|                 |                 | chiederà il     |                 |
-|                 |                 | consenso al     |                 |
-|                 |                 | trasferimento   |                 |
-|                 |                 | degli attributi |                 |
-|                 |                 | (valore da      |                 |
-|                 |                 | utilizzarsi     |                 |
-|                 |                 | limitatamente   |                 |
-|                 |                 | ai casi in cui  |                 |
-|                 |                 | si vuole        |                 |
-|                 |                 | forzare la      |                 |
-|                 |                 | riautenticazion |                 |
-|                 |                 | e)              |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **redirect_uri* | URL dove l’OP   | Deve essere uno | SI              |
-| *               | reindirizzerà   | degli URL       |                 |
-|                 | l’utente al     | indicati nel    |                 |
-|                 | termine del     | client metadata |                 |
-|                 | processo di     | (v. paragrafo   |                 |
-|                 | autenticazione. | 3.2).           |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **response_type | Il tipo di      | **code**        | SI              |
-| **              | credenziali che |                 |                 |
-|                 | deve restituire |                 |                 |
-|                 | l’OP.           |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Scope**       | Lista degli     | **openid**      | SI              |
-|                 | scope           | (obbligatorio)  |                 |
-|                 | richiesti.      |                 |                 |
-|                 |                 | **offline_acces |                 |
-|                 |                 | s**:            |                 |
-|                 |                 | se specificato, |                 |
-|                 |                 | l’OP rilascerà  |                 |
-|                 |                 | oltre           |                 |
-|                 |                 | all’\ *access   |                 |
-|                 |                 | token* anche un |                 |
-|                 |                 | *refresh token* |                 |
-|                 |                 | necessario per  |                 |
-|                 |                 | instaurare      |                 |
-|                 |                 | sessioni lunghe |                 |
-|                 |                 | revocabili.     |                 |
-|                 |                 | L’uso di questo |                 |
-|                 |                 | valore è        |                 |
-|                 |                 | consentito solo |                 |
-|                 |                 | se il client è  |                 |
-|                 |                 | un’applicazione |                 |
-|                 |                 | per dispositivi |                 |
-|                 |                 | mobili che      |                 |
-|                 |                 | intenda offrire |                 |
-|                 |                 | all’utente una  |                 |
-|                 |                 | sessione lunga  |                 |
-|                 |                 | revocabile.     |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **Claims**      | Lista dei       | v. paragrafo    | SI              |
-|                 | claims          | 5.1             |                 |
-|                 | (attributi) che |                 |                 |
-|                 | un RP intende   |                 |                 |
-|                 | richiedere per  |                 |                 |
-|                 | il servizio.    |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **acr_values**  | Livello minimo  | Se sono         | SI              |
-|                 | SPID richiesto. | richiesti più   |                 |
-|                 |                 | livelli,        |                 |
-|                 |                 | occorre         |                 |
-|                 |                 | indicarli in    |                 |
-|                 |                 | ordine di       |                 |
-|                 |                 | preferenza      |                 |
-|                 |                 | separati da uno |                 |
-|                 |                 | spazio.         |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **State**       | Valore univoco  | Stringa di      | SI              |
-|                 | utilizzato per  | almeno 32       |                 |
-|                 | mantenere lo    | caratteri       |                 |
-|                 | stato tra la    | alfanumerici.   |                 |
-|                 | request e il    |                 |                 |
-|                 | callback.       |                 |                 |
-|                 | Questo valore   |                 |                 |
-|                 | verrà           |                 |                 |
-|                 | restituito al   |                 |                 |
-|                 | client nella    |                 |                 |
-|                 | risposta al     |                 |                 |
-|                 | termine         |                 |                 |
-|                 | dell’autenticaz |                 |                 |
-|                 | ione.           |                 |                 |
-|                 |                 |                 |                 |
-|                 | Il valore deve  |                 |                 |
-|                 | essere          |                 |                 |
-|                 | significativo   |                 |                 |
-|                 | esclusivamente  |                 |                 |
-|                 | per il RP e non |                 |                 |
-|                 | deve essere     |                 |                 |
-|                 | intellegibile   |                 |                 |
-|                 | ad altri.       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **response_mode | http://openid.n | form_post       | SI              |
-| **              | et/specs/oauth- |                 |                 |
-|                 | v2-form-post-re |                 |                 |
-|                 | sponse-mode-1_0 |                 |                 |
-|                 | .html#FormPostR |                 |                 |
-|                 | esponseMode     |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| **ui_locales**  | Lingue          | Lista di codici | NO              |
-|                 | preferibili per | RFC5646         |                 |
-|                 | visualizzare le | separati da     |                 |
-|                 | pagine dell’OP. | spazi.          |                 |
-|                 | L’OP può        |                 |                 |
-|                 | ignorare questo |                 |                 |
-|                 | parametro se    |                 |                 |
-|                 | non dispone di  |                 |                 |
-|                 | nessuna delle   |                 |                 |
-|                 | lingue          |                 |                 |
-|                 | indicate.       |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **Parametro**             | **Descrizione**                                                                        | **Valori ammessi**  | **Obbligatorio** |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **client_id**             | URI che identifica univocamente il ad un valore RP come da Registro SPID.              | Deve corrispondere  | SI               |
+|                           |                                                                                        | nel Registro SPID.  |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **code_challenge**        | Un challenge per PKCE da riportare anche nella successiva richiesta al Token endpoint. | V. paragrafo 6.1    | SI               |
+|                           |                                                                                        | "Generazione del    |                  |
+|                           |                                                                                        | code_challenge      |                  |
+|                           |                                                                                        | per PKCE"           |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **code_challenge_method** | Metodo di costruzione del challenge PKCE.                                              | È obbligatorio      | SI               |
+|                           |                                                                                        | specificare il      |                  | 
+|                           |                                                                                        | valore **S256**     |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **Nonce**                 | Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da  | Stringa di almeno   | SI               |
+|                           | Questo valore sarà restituito nell’ID Token fornito dal oken Endpoint, in modo da      |  32 caratteri       |                  |
+|                           | consentire al client di verificare che sia uguale a quello inviato nella richiesta di  | alfanumerici.       |                  |
+|                           | autenticazione.                                                                        |                     |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **Prompt**                | Definisce se l’OP deve occuparsi di eseguire una richiesta di autenticazione all’utente| **consent**:        | SI               |
+|                           | o meno.                                                                                | l’OP chiederà le    |                  |
+|                           |                                                                                        | le credenziali di   |                  |
+|                           |                                                                                        | all’utente (ma solo |                  |
+|                           |                                                                                        | se non è già attiva |                  | 
+|                           |                                                                                        | una sessione di     |                  |
+|                           |                                                                                        | Single Sign-On) e   |                  |  
+|                           |                                                                                        | successivamente     |                  |
+|                           |                                                                                        | chiederà il consenso|                  |
+|                           |                                                                                        | al trasferimento    |                  |
+|                           |                                                                                        | degli attributi     |                  |
+|                           |                                                                                        | (valore consigliato)|                  |         
+|                           |                                                                                        |                     |                  |
+|                           |                                                                                        | **consent login:**  |                  |
+|                           |                                                                                        | l’OP chiederà sempre|                  |
+|                           |                                                                                        | le credenziali di   |                  |
+|                           |                                                                                        | autenticazione      |                  |
+|                           |                                                                                        | all’utente e        |                  |
+|                           |                                                                                        | successivamente     |                  |
+|                           |                                                                                        | chiederà il consenso|                  |
+|                           |                                                                                        | al trasferimento    |                  |
+|                           |                                                                                        | degli attributi     |                  |
+|                           |                                                                                        | (valore da          |                  |
+|                           |                                                                                        | utilizzarsi         |                  |
+|                           |                                                                                        | limitatamente       |                  |
+|                           |                                                                                        | ai casi in cui si   |                  |
+|                           |                                                                                        | vuole forzare la    |                  |
+|                           |                                                                                        | riautenticazione)   |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **redirect_uri**          | URL dove l’OP reindirizzerà l’utente al termine del processo di autenticazione.        | Deve essere uno     | SI               |
+|                           |                                                                                        | degli URL indicati  |                  |
+|                           |                                                                                        | nel client metadata |                  |
+|                           |                                                                                        | (v. paragrafo 3.2). |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **response_type**         | Il tipo di credenziali che deve restituire l’OP.                                       | **code**            | SI               |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **Scope**                 | Lista degli scope richiesti.                                                           | **openid**          | SI               |
+|                           |                                                                                        | (obbligatorio)      |                  |
+|                           |                                                                                        | **offline_access**: |                  |
+|                           |                                                                                        | se specificato, l’OP|                  |
+|                           |                                                                                        | rilascerà oltre     |                  |
+|                           |                                                                                        | all’\ *access token*|                  |
+|                           |                                                                                        | anche un *refresh*  |                  |
+|                           |                                                                                        | *token* necessario  |                  |
+|                           |                                                                                        | per instaurare      |                  |
+|                           |                                                                                        | sessioni lunghe     |                  |
+|                           |                                                                                        | revocabili. L’uso di|                  |
+|                           |                                                                                        | questo valore è     |                  |
+|                           |                                                                                        | consentito solo se  |                  |
+|                           |                                                                                        | il client è         |                  |
+|                           |                                                                                        | un’applicazione     |                  |
+|                           |                                                                                        | per dispositivi     |                  |
+|                           |                                                                                        | mobili che intenda  |                  |
+|                           |                                                                                        | offrire all’utente  |                  |
+|                           |                                                                                        | una sessione lunga  |                  |
+|                           |                                                                                        | revocabile.         |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **Claims**                | Lista dei claims (attributi) che un RP intende richiedere per il servizio.             | v. paragrafo 5.1    | SI               |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **acr_values**            | Livello minimo SPID richiesto.                                                         | Se sono richiesti   | SI               |
+|                           |                                                                                        | più livelli, occorre|                  |
+|                           |                                                                                        | indicarli in ordine |                  |
+|                           |                                                                                        | di preferenza,      |                  |
+|                           |                                                                                        | separati da uno     |                  |
+|                           |                                                                                        | spazio.             |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **State**                 | Valore univoco utilizzato per mantenere lo stato tra la request e il callback. Questo  | Stringa di almeno   | SI               |
+|                           | valore verrà restituito al client nella risposta al termine dell’autenticazione.       | almeno 32 caratteri |                  |
+|                           | Il valore deve essere significativo esclusivamente per il RP e non deve essere         | alfanumerici.       |                  |
+|                           | intellegibile ad altri.                                                                |                     |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **response_mode**         | http://openid.net/specs/oauth-v2-form-post-response-mode-1_0.html#FormPostResponseMode | form_post           | SI               |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
+| **ui_locales**            | Lingue preferibili per visualizzare le pagine dell’OP. L’OP può ignorare questo        | Lista di codici     | NO               |
+|                           | parametro se non dispone di nessuna delle lingue indicate.                             | RFC5646 separati da |                  |
+|                           |                                                                                        | spazi.              |                  |
++---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 
 **Riferimenti:**
 
