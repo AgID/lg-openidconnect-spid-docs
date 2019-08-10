@@ -83,7 +83,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           |                                                                                        | valore **S256**     |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 | **Nonce**                 | Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da  | Stringa di almeno   | SI               |
-|                           | Questo valore sarà restituito nell’ID Token fornito dal oken Endpoint, in modo da      |  32 caratteri       |                  |
+|                           | Questo valore sarà restituito nell’ID Token fornito dal Token Endpoint, in modo da     | 32 caratteri        |                  |
 |                           | consentire al client di verificare che sia uguale a quello inviato nella richiesta di  | alfanumerici.       |                  |
 |                           | autenticazione.                                                                        |                     |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
@@ -144,7 +144,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           |                                                                                        | una sessione lunga  |                  |
 |                           |                                                                                        | revocabile.         |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
-| **Claims**                | Lista dei claims (attributi) che un RP intende richiedere per il servizio.             | v. paragrafo 5.1    | SI               |
+| **Claims**                | Lista dei claims (attributi) che un RP intende richiedere per il servizio.             | vedi paragrafo 5.1  | SI               |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 | **acr_values**            | Livello minimo SPID richiesto.                                                         | Se sono richiesti   | SI               |
 |                           |                                                                                        | più livelli, occorre|                  |
