@@ -226,88 +226,88 @@ autenticazione SPID in base al livello richiesto.
 Se la Refresh Request è valida, l’OpenID Connect Provider restituisce un
 ID Token con i seguenti parametri:
 
-+-----------------------+-----------------------+-----------------------+
-| **Parametro**         | **Descrizione**       | **Valori ammessi**    |
-+-----------------------+-----------------------+-----------------------+
-| **Iss**               | Identificatore        | Deve essere lo stesso |
-|                       | dell’OP che lo        | indicato nell'ID      |
-|                       | contraddistingue      | Token emesso          |
-|                       | univocamente nella    | nell'autenticazione   |
-|                       | federazione nel       | originaria.           |
-|                       | formato Uniform       |                       |
-|                       | Resource Locator      |                       |
-|                       | (URL).                |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Sub**               | Per il valore di      | Deve essere lo stesso |
-|                       | questo parametro fare | indicato nell'ID      |
-|                       | riferimento allo      | Token emesso          |
-|                       | standard “OpenID      | nell'autenticazione   |
-|                       | Connect Core 1.0”,    | originaria.           |
-|                       | paragrafo 8.1.        |                       |
-|                       | “Pairwise Identifier  |                       |
-|                       | Algorithm”.           |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Aud**               | Contiene il client    | Deve essere lo stesso |
-|                       | ID.                   | indicato nell'ID      |
-|                       |                       | Token emesso          |
-|                       |                       | nell'autenticazione   |
-|                       |                       | originaria.           |
-+-----------------------+-----------------------+-----------------------+
-| **Acr**               | Livello di            | https://www.spid.gov. |
-|                       | autenticazione        | it/SpidL1             |
-|                       | ammesso a seguito di  |                       |
-|                       | richiesta di refresh  |                       |
-+-----------------------+-----------------------+-----------------------+
-| **at_hash**           | Hash dell’Access      | Il client è tenuto a  |
-|                       | Token; il suo valore  | verificare che questo |
-|                       | è                     | valore corrisponda    |
-|                       | la codifica base64url | all’\ *access token*  |
-|                       | della prima metà      | restituito insieme    |
-|                       | dell’hash del valore  | all’ID Token.         |
-|                       | access_token, usando  |                       |
-|                       | l’algoritmo di        |                       |
-|                       | hashing indicato in   |                       |
-|                       | **alg** nell’header   |                       |
-|                       | dell’ID Token.        |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Iat**               | Data/ora di emissione |                       |
-|                       | del token in formato  |                       |
-|                       | UTC.                  |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Nbf**               | Data/ora di inizio    |                       |
-|                       | validità del token in |                       |
-|                       | formato UTC. Deve     |                       |
-|                       | corrispondere con il  |                       |
-|                       | valore di **iat**.    |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Exp**               | Data/ora di scadenza  |                       |
-|                       | del token in formato  |                       |
-|                       | UTC                   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Jti**               | Identificatore unico  |                       |
-|                       | dell’ID Token che il  |                       |
-|                       | client può utilizzare |                       |
-|                       | per prevenirne il     |                       |
-|                       | riuso, rifiutando     |                       |
-|                       | l’ID Token se già     |                       |
-|                       | processato. Deve      |                       |
-|                       | essere di difficile   |                       |
-|                       | individuazione da     |                       |
-|                       | parte di un           |                       |
-|                       | attaccante e composto |                       |
-|                       | da una stringa        |                       |
-|                       | casuale.              |                       |
-+-----------------------+-----------------------+-----------------------+
-| **Nonce**             | Stringa casuale       | Il client è tenuto a  |
-|                       | generata dal Client   | verificare che        |
-|                       | per ciascuna sessione | coincida con quella   |
-|                       | utente ed inviata     | inviata               |
-|                       | nell’Authentication   | nell’Authentication   |
-|                       | Request (parametro    | Request.              |
-|                       | nonce), finalizzata a |                       |
-|                       | mitigare attacchi     |                       |
-|                       | replay.               |                       |
-+-----------------------+-----------------------+-----------------------+
++-----------------------+-----------------------+--------------------------------+
+| **Parametro**         | **Descrizione**       | **Valori ammessi**             |
++-----------------------+-----------------------+--------------------------------+
+| **Iss**               | Identificatore        | Deve essere lo stesso          |
+|                       | dell’OP che lo        | indicato nell'ID               |
+|                       | contraddistingue      | Token emesso                   |
+|                       | univocamente nella    | nell'autenticazione            |
+|                       | federazione nel       | originaria.                    |
+|                       | formato Uniform       |                                |
+|                       | Resource Locator      |                                |
+|                       | (URL).                |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Sub**               | Per il valore di      | Deve essere lo stesso          |
+|                       | questo parametro fare | indicato nell'ID               |
+|                       | riferimento allo      | Token emesso                   |
+|                       | standard “OpenID      | nell'autenticazione            |
+|                       | Connect Core 1.0”,    | originaria.                    |
+|                       | paragrafo 8.1.        |                                |
+|                       | “Pairwise Identifier  |                                |
+|                       | Algorithm”.           |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Aud**               | Contiene il client    | Deve essere lo stesso          |
+|                       | ID.                   | indicato nell'ID               |
+|                       |                       | Token emesso                   |
+|                       |                       | nell'autenticazione            |
+|                       |                       | originaria.                    |
++-----------------------+-----------------------+--------------------------------+
+| **Acr**               | Livello di            | https://www.spid.gov.it/SpidL1 |
+|                       | autenticazione        |                                |
+|                       | ammesso a seguito di  |                                |
+|                       | richiesta di refresh  |                                |
++-----------------------+-----------------------+--------------------------------+
+| **at_hash**           | Hash dell’Access      | Il client è tenuto a           |
+|                       | Token; il suo valore  | verificare che questo          |
+|                       | è                     | valore corrisponda             |
+|                       | la codifica base64url | all’\ *access token*           |
+|                       | della prima metà      | restituito insieme             |
+|                       | dell’hash del valore  | all’ID Token.                  |
+|                       | access_token, usando  |                                |
+|                       | l’algoritmo di        |                                |
+|                       | hashing indicato in   |                                |
+|                       | **alg** nell’header   |                                |
+|                       | dell’ID Token.        |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Iat**               | Data/ora di emissione |                                |
+|                       | del token in formato  |                                |
+|                       | UTC.                  |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Nbf**               | Data/ora di inizio    |                                |
+|                       | validità del token in |                                |
+|                       | formato UTC. Deve     |                                |
+|                       | corrispondere con il  |                                |
+|                       | valore di **iat**.    |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Exp**               | Data/ora di scadenza  |                                |
+|                       | del token in formato  |                                |
+|                       | UTC                   |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Jti**               | Identificatore unico  |                                |
+|                       | dell’ID Token che il  |                                |         
+|                       | client può utilizzare |                                |
+|                       | per prevenirne il     |                                |
+|                       | riuso, rifiutando     |                                |
+|                       | l’ID Token se già     |                                |
+|                       | processato. Deve      |                                |
+|                       | essere di difficile   |                                |
+|                       | individuazione da     |                                |
+|                       | parte di un           |                                |
+|                       | attaccante e composto |                                |
+|                       | da una stringa        |                                |
+|                       | casuale.              |                                |
++-----------------------+-----------------------+--------------------------------+
+| **Nonce**             | Stringa casuale       | Il client è tenuto a           |
+|                       | generata dal Client   | verificare che                 |
+|                       | per ciascuna sessione | coincida con quella            |
+|                       | utente ed inviata     | inviata                        |
+|                       | nell’Authentication   | nell’Authentication            |
+|                       | Request (parametro    | Request.                       |
+|                       | nonce), finalizzata a |                                |
+|                       | mitigare attacchi     |                                |
+|                       | replay.               |                                |
++-----------------------+-----------------------+--------------------------------+
 
 Il refresh token ottenuto con la richiesta di autenticazione ha una
 validità massima di 30 giorni, entro i quali potrà essere utilizzato un
