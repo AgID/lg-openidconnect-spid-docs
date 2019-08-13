@@ -7,8 +7,8 @@ Authorization server, reindizza l’utente con i seguenti parametri:
 .. code-block:: json
 
  https://op.spid.agid.gov.it/resp?             
- **code**=usDwMnEzJPpG5oaV8x3j&              
- **state**=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd 
+ code=usDwMnEzJPpG5oaV8x3j&              
+ state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd 
 
 
 +-----------------------+-----------------------+-----------------------+
