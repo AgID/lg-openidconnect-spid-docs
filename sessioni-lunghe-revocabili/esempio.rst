@@ -165,20 +165,6 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           |                                                                                        | spazi.              |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 
-**Riferimenti:**
-
-+--------------------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
-|                                                                                |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
-|                                                                                |
-| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
-+--------------------------------------------------------------------------------+
-
 **Esempio Refresh (chiamata HTTP):**
 
 +----------------------------------------------------+
@@ -308,3 +294,19 @@ validità massima di 30 giorni, entro i quali potrà essere utilizzato un
 numero illimitato di volte. Allo scadere dei 30 giorni non potrà più
 essere utilizzato e sarà necessario rieseguire l’autenticazione
 completa.
+
+
+**Riferimenti:**
+
++--------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
+|                                                                                |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
+|                                                                                |
+| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
++--------------------------------------------------------------------------------+
+
