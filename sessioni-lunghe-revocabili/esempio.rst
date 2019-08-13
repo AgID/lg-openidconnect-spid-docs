@@ -181,21 +181,15 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 
 **Esempio Refresh (chiamata HTTP):**
 
-+---------------------------------------------------+
-| POST /token HTTP/1.1                              |
-|                                                   |
-| Host: server.example.com                          |
-|                                                   |
-| Content-Type: application/x-www-form-urlencoded   |
-|                                                   |
-| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it |
-|                                                   |
-| &\ **grant_type**\ =refresh_token                 |
-|                                                   |
-| &\ **refresh_token**\ =8xLOxBtZp8                 |
-|                                                   |
-| &\ **scope**\ =opened                             |
-+---------------------------------------------------+
++----------------------------------------------------+
+|| POST /token HTTP/1.1                              |
+|| Host: server.example.com                          |
+|| Content-Type: application/x-www-form-urlencoded   |
+|| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it |
+|| &\ **grant_type**\ =refresh_token                 |
+|| &\ **refresh_token**\ =8xLOxBtZp8                 |
+|| &\ **scope**\ =opened                             |
++----------------------------------------------------+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
