@@ -47,7 +47,7 @@ definite dall’Agenzia per l’Italia Digitale.
     "https://attributes.spid.gov.it/familyName": null                   
    },                                                                  
   }                                                                   
- state**\ =fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        
+ state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        
  }                                                                   
 
 +-----------------+-----------------+-----------------+-----------------+
