@@ -11,11 +11,11 @@ segue.
 .. code-block:: json
 
  { 
-   "active": true,                        
-   "scope": "foo bar",                    
-   "exp": 1519033149,                     
-   "sub": "OP-1234567890",                
-   "client_id": "https://rp.agid.gov.it/" 
+   "**active**": true,                        
+   "**scope**": "foo bar",                    
+   "**exp**": 1519033149,                     
+   "**sub**": "OP-1234567890",                
+   "**client_id**": "https://rp.agid.gov.it/" 
  }       
 
 

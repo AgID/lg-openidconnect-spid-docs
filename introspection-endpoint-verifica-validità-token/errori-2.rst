@@ -8,13 +8,15 @@ body avente gli elementi di seguito indicati.
 
 **Esempio:**
 
-.. code-block:: json
-
- {                                                                                                   
- "error": "invalid_client",                                                                           
- "error_description: "client_id non riconosciuto."
- }                                                 
-
++---------------------------------------------------+
+| {                                                 |
+|                                                   |
+| "error": "invalid_client",                        |
+|                                                   |
+| "error_description: "client_id non riconosciuto." |
+|                                                   |
+| }                                                 |
++---------------------------------------------------+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
