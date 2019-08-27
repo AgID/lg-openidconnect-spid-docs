@@ -4,8 +4,8 @@ Linee Guida OpenID Connect in SPID
 
 .. admonition:: consultation
    
-   La consultazione pubblica relativa alle Linee Guida OpenID Connect in SPID è attiva dal **19
-   agosto** al **18 settembre 2019**. 
+   La consultazione pubblica relativa alle Linee Guida OpenID Connect in SPID è attiva dal **27
+   agosto** al **26 settembre 2019**. 
 
 .. toctree::
   :maxdepth: 3
