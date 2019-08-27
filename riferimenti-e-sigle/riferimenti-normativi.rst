@@ -20,3 +20,7 @@ Riferimenti Normativi
 
 -  [Regolamento recante le modalità attuative per la realizzazione dello
    SPID] (articolo 4, comma 2, DPCM 24 ottobre 2014) e s.m.i.
+
+.. forum_italia::
+   :topic_id: 10911
+   :scope: document

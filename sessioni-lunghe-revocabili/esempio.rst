@@ -319,3 +319,7 @@ completa.
 | http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
 +--------------------------------------------------------------------------------+
 
+
+.. forum_italia::
+   :topic_id: 10944
+   :scope: document

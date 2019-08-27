@@ -37,3 +37,7 @@ I suoi punti di forza sono:
 Per tutti questi motivi, le presenti linee guide intendono normare
 l’utilizzo di OpenID Connect nel Sistema Pubblico di Identità Digitale
 italiano (SPID).
+
+.. forum_italia::
+   :topic_id: 10909
+   :scope: document

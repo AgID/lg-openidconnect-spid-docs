@@ -54,3 +54,7 @@ identificare il RP che esegue la richiesta.
 |                       | vuole ottenere        |                       |
 |                       | informazioni.         |                       |
 +-----------------------+-----------------------+-----------------------+
+
+.. forum_italia::
+   :topic_id: 10937
+   :scope: document

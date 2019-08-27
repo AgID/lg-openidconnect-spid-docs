@@ -27,3 +27,7 @@ meccanismi di cifratura dei dati o impiegati sistemi di basi di dati
 
 Per il mantenimento devono essere messi in atto meccanismi che
 garantiscono l’integrità e il non ripudio.
+
+.. forum_italia::
+   :topic_id: 10946
+   :scope: document

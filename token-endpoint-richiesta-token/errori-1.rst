@@ -71,3 +71,7 @@ Di seguito i codici di errore:
 |                                                                         |
 | http://openid.net/specs/openid-connect-core-1_0.html#TokenErrorResponse |
 +-------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10929
+   :scope: document

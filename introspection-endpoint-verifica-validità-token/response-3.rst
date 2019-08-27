@@ -51,3 +51,7 @@ segue.
 |                       | come da Registro      | coincida con il       |
 |                       | SPID.                 | proprio client_id.    |
 +-----------------------+-----------------------+-----------------------+
+
+.. forum_italia::
+   :topic_id: 10934
+   :scope: document

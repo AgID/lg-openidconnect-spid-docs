@@ -16,3 +16,7 @@ Authentication Request:
    -  il livello SPID 2 + il livello SPID 1.
 
    -  il livello SPID 3 + il livello SPID 1.
+
+.. forum_italia::
+   :topic_id: 10941
+   :scope: document

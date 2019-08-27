@@ -57,3 +57,7 @@ OAuth 2.0 - Draft 03, paragrafo 3.2.1, “JWT Bearer Tokens”.
 |                       | cifrato (v. paragrafo |                       |
 |                       | dedicato).            |                       |
 +-----------------------+-----------------------+-----------------------+
+
+.. forum_italia::
+   :topic_id: 10927
+   :scope: document

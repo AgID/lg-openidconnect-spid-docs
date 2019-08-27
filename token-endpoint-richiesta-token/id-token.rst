@@ -123,3 +123,7 @@ la validazione dell’ID Token.
 |                                                                                 |
 | https://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.3.1 |
 +---------------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10928
+   :scope: document

@@ -15,3 +15,7 @@ che non passi per il reinserimento delle credenziali SPID ad ogni avvio,
   sessioni-lunghe-revocabili/introspection.rst
   sessioni-lunghe-revocabili/esempio.rst
   sessioni-lunghe-revocabili/gestione-delle-sessioni.rst
+
+.. forum_italia::
+   :topic_id: 10939
+   :scope: document

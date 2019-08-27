@@ -55,3 +55,7 @@ delle pubbliche amministrazioni e delle imprese”.
 
 Le presenti Linee Guida entreranno in vigore 6 mesi dopo la loro
 adozione da parte dell’Agenzia per l’Italia Digitale.
+
+.. forum_italia::
+   :topic_id: 10910
+   :scope: document

@@ -63,3 +63,7 @@ Di seguito i codici di errore:
 +-------------------------------------------------+
 | https://tools.ietf.org/html/rfc7662#section-2.3 |
 +-------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10935
+   :scope: document

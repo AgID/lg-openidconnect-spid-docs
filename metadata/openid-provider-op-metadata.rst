@@ -278,3 +278,7 @@ con alcuni campi in aggiunta.
 +-----------------------------------------------------------------------------+
 | https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata |
 +-----------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10915
+   :scope: document

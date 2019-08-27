@@ -30,3 +30,7 @@ Authorization server, reindizza l’utente con i seguenti parametri:
 |                       | tenuto a verificarne  | Authorization         |
 |                       | la corrispondenza.    | Request.              |
 +-----------------------+-----------------------+-----------------------+
+
+.. forum_italia::
+   :topic_id: 10923
+   :scope: document

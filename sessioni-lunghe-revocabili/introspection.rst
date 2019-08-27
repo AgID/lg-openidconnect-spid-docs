@@ -10,3 +10,7 @@ In caso negativo, deve inviare una richiesta al Token Endpoint con il
 
 Nel caso in cui il Token Endpoint rifiuti la concessione di un nuovo
 *access token*, l’utente dovrà effettuare un nuovo login SPID.
+
+.. forum_italia::
+   :topic_id: 10943
+   :scope: document

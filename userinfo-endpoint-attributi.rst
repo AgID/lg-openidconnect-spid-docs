@@ -31,3 +31,7 @@ consentire ai client Java Script di accedere all'endpoint.
   :caption: Indice dei contenuti
 
   userinfo-endpoint-attributi/response-2.rst
+
+.. forum_italia::
+   :topic_id: 10930
+   :scope: document
