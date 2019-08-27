@@ -78,3 +78,7 @@ Di seguito i codici di errore:
 +-----------------------------------------------------+
 | https://tools.ietf.org/html/rfc6749#section-4.1.2.1 |
 +-----------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10924
+   :scope: document

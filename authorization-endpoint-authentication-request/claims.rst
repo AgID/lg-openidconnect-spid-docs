@@ -28,3 +28,7 @@ convenzione, possono utilizzare.
 +-------------------------------------------------------------------------------+
 | http://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests |                                                         
 +-------------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10920
+   :scope: document

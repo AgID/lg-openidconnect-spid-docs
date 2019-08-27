@@ -20,3 +20,7 @@ OpenID Connect 1.0*, con la seguente personalizzazione:
 |                                                                  |
 | http://openid.net/specs/openid-igov-oauth2-1_0-02.html           |
 +------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10912
+   :scope: document

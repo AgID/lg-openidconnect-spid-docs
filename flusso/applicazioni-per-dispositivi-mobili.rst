@@ -31,3 +31,7 @@ di sicurezza da applicarsi in caso di applicazioni mobili.
 +--------------------------------------------------------------------------+
 | RFC8252: OAuth 2.0 for Native Apps (https://tools.ietf.org/html/rfc8252) |
 +--------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10918
+   :scope: document

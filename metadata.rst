@@ -13,3 +13,7 @@ configurazione nei rispettivi sistemi.
 
   metadata/openid-provider-op-metadata.rst
   metadata/client-metadata-relying-party-metadata.rst
+
+.. forum_italia::
+   :topic_id: 10914
+   :scope: document

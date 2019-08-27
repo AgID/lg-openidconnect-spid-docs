@@ -281,3 +281,7 @@ definite dall’Agenzia per l’Italia Digitale.
 
   authorization-endpoint-authentication-request/claims.rst
   authorization-endpoint-authentication-request/generazione-del-code_challenge-per-pkce.rst
+
+.. forum_italia::
+   :topic_id: 10919
+   :scope: document

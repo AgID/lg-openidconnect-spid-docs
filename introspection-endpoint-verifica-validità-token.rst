@@ -20,3 +20,7 @@ validità.
   introspection-endpoint-verifica-validità-token/request-1.rst
   introspection-endpoint-verifica-validità-token/response-3.rst
   introspection-endpoint-verifica-validità-token/errori-2.rst
+
+.. forum_italia::
+   :topic_id: 10932
+   :scope: document

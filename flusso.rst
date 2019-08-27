@@ -129,3 +129,7 @@ tutti i token sono restituiti dal token endpoint.
 .. |image1| image:: ./media/image4.png
    :width: 5.19583in
    :height: 8.73403in
+
+.. forum_italia::
+   :topic_id: 10917
+   :scope: document

@@ -27,3 +27,7 @@ Il *code challenge* deve essere generato con algoritmo SHA256.
 |                                                                          |
 | https://tools.ietf.org/html/rfc7636                                      |
 +--------------------------------------------------------------------------+
+
+.. forum_italia::
+   :topic_id: 10921
+   :scope: document

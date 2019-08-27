@@ -22,3 +22,7 @@ aggiungendo nella post i parametri in risposta.
 
   authentication-response/response.rst
   authentication-response/errori.rst
+
+.. forum_italia::
+   :topic_id: 10922
+   :scope: document

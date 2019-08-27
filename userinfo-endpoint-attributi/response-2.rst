@@ -49,3 +49,7 @@ Request.
 
 In caso di errore di autenticazione, lo UserInfo Endpoint restituisce un
 errore “HTTP 401”.
+
+.. forum_italia::
+   :topic_id: 10931
+   :scope: document

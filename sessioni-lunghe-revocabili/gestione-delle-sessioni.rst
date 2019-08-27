@@ -15,3 +15,7 @@ possa revocarle singolarmente o in massa.
 
 In caso di modifica della password richiesta dall’utente, l’OP deve
 prevedere la possibilità di revocare tutte le sessioni lunghe attive.
+
+.. forum_italia::
+   :topic_id: 10945
+   :scope: document

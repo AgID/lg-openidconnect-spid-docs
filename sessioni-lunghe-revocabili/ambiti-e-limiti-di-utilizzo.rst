@@ -23,3 +23,7 @@ Ambiti e limiti di utilizzo
 5. Nel caso in cui sia necessario accedere all’applicazione con un
    livello superiore a SPID di Livello 1, occorre effettuare una nuova
    autenticazione SPID in base al livello richiesto.
+
+.. forum_italia::
+   :topic_id: 10940
+   :scope: document

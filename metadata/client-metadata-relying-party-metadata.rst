@@ -116,3 +116,6 @@ con alcuni campi in aggiunta.
 | https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata |                                                               
 +------------------------------------------------------------------------------+
       
+.. forum_italia::
+   :topic_id: 10916
+   :scope: document

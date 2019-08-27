@@ -37,3 +37,7 @@ vi sono due scenari distinti in cui il client chiama il Token Endpoint:
   token-endpoint-richiesta-token/response-1.rst
   token-endpoint-richiesta-token/id-token.rst
   token-endpoint-richiesta-token/errori-1.rst
+
+.. forum_italia::
+   :topic_id: 10925
+   :scope: document

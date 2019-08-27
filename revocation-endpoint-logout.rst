@@ -25,3 +25,7 @@ altri token attivi per l’utente dovranno invece essere mantenuti validi.
 
   revocation-endpoint-logout/request-2.rst
   revocation-endpoint-logout/response-4.rst
+
+.. forum_italia::
+   :topic_id: 10936
+   :scope: document

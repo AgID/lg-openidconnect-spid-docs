@@ -44,3 +44,7 @@ servizi (Service Provider - SP) di cui al DPCM 24 ottobre 2014,
 dell'identità digitale di cittadini e imprese (SPID), nonché dei tempi e
 delle modalità di adozione del sistema SPID da parte delle pubbliche
 amministrazioni e delle imprese.”
+
+.. forum_italia::
+   :topic_id: 10913
+   :scope: document
