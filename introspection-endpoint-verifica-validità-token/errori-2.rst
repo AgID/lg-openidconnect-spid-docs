@@ -10,10 +10,11 @@ body avente gli elementi di seguito indicati.
 
 .. code-block:: json
 
- {                                                
+ {                                                 
   "error": "invalid_client",                        
   "error_description: "client_id non riconosciuto." 
  }                                                 
+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |

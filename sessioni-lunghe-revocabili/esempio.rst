@@ -43,6 +43,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 | iOiB0cnVlfSwNCiAgICAgIm5p                                             |
 +-----------------------------------------------------------------------+
 
+
 **Esempio (contenuto del JWT):**
 
 .. code-block:: json
@@ -65,6 +66,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
      }&
     state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
  }                                                                     
+
 
 
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
@@ -165,37 +167,20 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           |                                                                                        | spazi.              |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 
-**Riferimenti:**
-
-+--------------------------------------------------------------------------------+
-| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
-|                                                                                |
-| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
-|                                                                                |
-| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
-|                                                                                |
-| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
-+--------------------------------------------------------------------------------+
+=======
 
 **Esempio Refresh (chiamata HTTP):**
 
-+---------------------------------------------------+
-| POST /token HTTP/1.1                              |
-|                                                   |
-| Host: server.example.com                          |
-|                                                   |
-| Content-Type: application/x-www-form-urlencoded   |
-|                                                   |
-| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it |
-|                                                   |
-| &\ **grant_type**\ =refresh_token                 |
-|                                                   |
-| &\ **refresh_token**\ =8xLOxBtZp8                 |
-|                                                   |
-| &\ **scope**\ =opened                             |
-+---------------------------------------------------+
++----------------------------------------------------+
+|| POST /token HTTP/1.1                              |
+|| Host: server.example.com                          |
+|| Content-Type: application/x-www-form-urlencoded   |
+|| **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it |
+|| &\ **grant_type**\ =refresh_token                 |
+|| &\ **refresh_token**\ =8xLOxBtZp8                 |
+|| &\ **scope**\ =opened                             |
++----------------------------------------------------+
+
 
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**    |
@@ -216,6 +201,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 | **Scope**             |                       | openid                |
 +-----------------------+-----------------------+-----------------------+
 
+
 Nel caso in cui il Token Endpoint rifiuti la concessione di un nuovo *ID
 token* e *access token*, l’utente dovrà effettuare un nuovo login SPID.
 
@@ -225,6 +211,7 @@ autenticazione SPID in base al livello richiesto.
 
 Se la Refresh Request è valida, l’OpenID Connect Provider restituisce un
 ID Token con i seguenti parametri:
+
 
 +-----------------------+-----------------------+--------------------------------+
 | **Parametro**         | **Descrizione**       | **Valori ammessi**             |
@@ -309,8 +296,26 @@ ID Token con i seguenti parametri:
 |                       | replay.               |                                |
 +-----------------------+-----------------------+--------------------------------+
 
+
 Il refresh token ottenuto con la richiesta di autenticazione ha una
 validità massima di 30 giorni, entro i quali potrà essere utilizzato un
 numero illimitato di volte. Allo scadere dei 30 giorni non potrà più
 essere utilizzato e sarà necessario rieseguire l’autenticazione
 completa.
+
+
+
+**Riferimenti:**
+
++--------------------------------------------------------------------------------+
+| http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest               |
+|                                                                                |
+| http://openid.net/specs/openid-igov-oauth2-1_0-02.html#rfc.section.2.1.1       |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.1 |
+|                                                                                |
+| http://openid.net/specs/openid-igov-openid-connect-1_0-02.html#rfc.section.2.4 |
+|                                                                                |
+| http://openid.net/specs/openid-connect-core-1_0.html#JWTRequests               |
++--------------------------------------------------------------------------------+
+
