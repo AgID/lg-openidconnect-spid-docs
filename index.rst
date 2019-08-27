@@ -9,6 +9,7 @@ Linee Guida OpenID Connect in SPID
 
 .. toctree::
   :maxdepth: 3
+  :numbered:
   :caption: Indice dei contenuti
 
   introduzione.rst
