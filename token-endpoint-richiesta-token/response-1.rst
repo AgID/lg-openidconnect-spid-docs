@@ -5,7 +5,7 @@ Response
 
 Dopo avere ricevuto e validato la Token request dal client, il Token
 endpoint dell’OpenID Provider (OP) restituisce una response che include
-ID Token e Access Token e un eventuale Refresh Token, in formato JWT e
+ID Token, Access Token ed un eventuale Refresh Token in formato JWT,
 firmati secondo le modalità definite dall’Agenzia per l’Italia Digitale.
 
 Access Token e ID Token devono essere formati secondo le indicazioni
@@ -14,7 +14,12 @@ OAuth 2.0 - Draft 03, paragrafo 3.2.1, “JWT Bearer Tokens”.
 
 .. code-block:: json
 
- { 
+ HTTP/1.1 200 OK
+ Content-Type: application/json
+ Cache-Control: no-store
+ Pragma: no-cache
+
+ {
   "access_token": "dC34Pf6kdG...",
   "token_type": "Bearer",
   "refresh_token": "wJ848BcyLP...",
