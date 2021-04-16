@@ -29,7 +29,8 @@ Essendo le funzionalità simili, ritroviamo gli stessi concetti di SAML
 +-------------------------+----------------------------+
 | Service Provider (SP)   | *Relying Party (RP)*       |
 +-------------------------+----------------------------+
-| SP metadata             | *Client metadata*          |
+| SP metadata             | *Client metadata* o        |
+|                         | *Relying Party* metadata   |
 +-------------------------+----------------------------+
 | Subject                 | *Subject Identifier*       |
 +-------------------------+----------------------------+

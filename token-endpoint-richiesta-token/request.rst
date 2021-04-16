@@ -133,7 +133,7 @@ Request
 | **grant_type**  | Tipo di         | Può assumere    | SI              |
 |                 | credenziale     | uno dei         |                 |
 |                 | presentata dal  | seguenti        |                 |
-|                 | Client per la   | valori:         |                 |
+|                 | RP per la       | valori:         |                 |
 |                 | richiesta       |                 |                 |
 |                 | corrente.       | **authorization |                 |
 |                 |                 | _code**         |                 |

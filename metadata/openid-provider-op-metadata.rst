@@ -49,7 +49,7 @@ con alcuni campi in aggiunta.
    "userinfo_encryption_enc_values_supported": [
        "..."
    ],
-   "claims_supported":[  
+   "claims_supported":[
      "https://attributes.spid.gov.it/spidCode",
      "https://attributes.spid.gov.it/name",
      "https://attributes.spid.gov.it/familyName",
@@ -122,7 +122,7 @@ con alcuni campi in aggiunta.
 |                                   | di identità.                                    |
 +-----------------------------------+-------------------------------------------------+
 | **authorization_endpoint**        | URL dell’Authorization Endpoint,                |
-|                                   | al quale il Client viene                        |
+|                                   | al quale il Relying Party (RP) viene            |
 |                                   | reindirizzato per iniziare il                   |
 |                                   | flusso di autenticazione.                       |
 +-----------------------------------+-------------------------------------------------+

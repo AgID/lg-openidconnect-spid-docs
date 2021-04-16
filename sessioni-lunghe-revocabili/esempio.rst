@@ -56,8 +56,8 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
     prompt=login,
     redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F,
     response_type=code,
-    scope=openid offline_access, 
-    acr_values=https://www.spid.gov.it/SpidL2 https://www.spid.gov.it/SpidL1,  
+    scope=openid offline_access,
+    acr_values=https://www.spid.gov.it/SpidL2 https://www.spid.gov.it/SpidL1,
     claims={
         "userinfo":{
             "https://attributes.spid.gov.it/name": null,
@@ -65,7 +65,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
         },
      }&
     state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
- }                                                                     
+ }
 
 
 
@@ -81,7 +81,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           |                                                                                        | per PKCE"           |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 | **code_challenge_method** | Metodo di costruzione del challenge PKCE.                                              | È obbligatorio      | SI               |
-|                           |                                                                                        | specificare il      |                  | 
+|                           |                                                                                        | specificare il      |                  |
 |                           |                                                                                        | valore **S256**     |                  |
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 | **Nonce**                 | Valore che serve ad evitare attacchi Reply, generato casualmente e non prevedibile da  | Stringa di almeno   | SI               |
@@ -93,14 +93,14 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                           | o meno.                                                                                | l’OP chiederà le    |                  |
 |                           |                                                                                        | le credenziali di   |                  |
 |                           |                                                                                        | all’utente (ma solo |                  |
-|                           |                                                                                        | se non è già attiva |                  | 
+|                           |                                                                                        | se non è già attiva |                  |
 |                           |                                                                                        | una sessione di     |                  |
-|                           |                                                                                        | Single Sign-On) e   |                  |  
+|                           |                                                                                        | Single Sign-On) e   |                  |
 |                           |                                                                                        | successivamente     |                  |
 |                           |                                                                                        | chiederà il consenso|                  |
 |                           |                                                                                        | al trasferimento    |                  |
 |                           |                                                                                        | degli attributi     |                  |
-|                           |                                                                                        | (valore consigliato)|                  |         
+|                           |                                                                                        | (valore consigliato)|                  |
 |                           |                                                                                        |                     |                  |
 |                           |                                                                                        | **consent login:**  |                  |
 |                           |                                                                                        | l’OP chiederà sempre|                  |
@@ -192,7 +192,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 |                       |                       | request.              |
 +-----------------------+-----------------------+-----------------------+
 | **grant_type**        | Tipo di credenziale   | Deve assumere il      |
-|                       | presentata dal Client | valore:               |
+|                       | presentata dal RP     | valore:               |
 |                       | per la richiesta      | **refresh_token**     |
 |                       | corrente.             |                       |
 +-----------------------+-----------------------+-----------------------+
@@ -272,7 +272,7 @@ ID Token con i seguenti parametri:
 |                       | UTC                   |                                |
 +-----------------------+-----------------------+--------------------------------+
 | **Jti**               | Identificatore unico  |                                |
-|                       | dell’ID Token che il  |                                |         
+|                       | dell’ID Token che il  |                                |
 |                       | client può utilizzare |                                |
 |                       | per prevenirne il     |                                |
 |                       | riuso, rifiutando     |                                |
@@ -286,7 +286,7 @@ ID Token con i seguenti parametri:
 |                       | casuale.              |                                |
 +-----------------------+-----------------------+--------------------------------+
 | **Nonce**             | Stringa casuale       | Il client è tenuto a           |
-|                       | generata dal Client   | verificare che                 |
+|                       | generata dal RP       | verificare che                 |
 |                       | per ciascuna sessione | coincida con quella            |
 |                       | utente ed inviata     | inviata                        |
 |                       | nell’Authentication   | nell’Authentication            |

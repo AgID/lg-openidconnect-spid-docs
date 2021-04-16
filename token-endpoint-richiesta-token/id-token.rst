@@ -2,7 +2,7 @@ ID Token
 ========
 
 L’ID Token è un JSON Web Token (JWT) che contiene informazioni
-sull’utente che ha eseguito l’autenticazione. I Client devono eseguire
+sull’utente che ha eseguito l’autenticazione. I Relying Party (RP) devono eseguire
 la validazione dell’ID Token.
 
 **Esempio di ID Token:**
@@ -106,7 +106,7 @@ la validazione dell’ID Token.
 |                       | casuale.              |                       |
 +-----------------------+-----------------------+-----------------------+
 | **Nonce**             | Stringa casuale       | Il client è tenuto a  |
-|                       | generata dal Client   | verificare che        |
+|                       | generata dal RP       | verificare che        |
 |                       | per ciascuna sessione | coincida con quella   |
 |                       | utente ed inviata     | inviata               |
 |                       | nell’Authentication   | nell’Authentication   |
