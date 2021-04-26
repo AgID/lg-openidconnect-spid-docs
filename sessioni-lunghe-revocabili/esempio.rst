@@ -56,7 +56,7 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
     prompt=login,
     redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F,
     response_type=code,
-    scope=openid offline_access,
+    scope=openid profile offline_access,
     acr_values=https://www.spid.gov.it/SpidL2 https://www.spid.gov.it/SpidL1,
     claims={
         "userinfo":{
@@ -127,6 +127,10 @@ livello "SPID1" con scadenza a 30 giorni dall’autenticazione originaria.
 +---------------------------+----------------------------------------------------------------------------------------+---------------------+------------------+
 | **Scope**                 | Lista degli scope richiesti.                                                           | **openid**          | SI               |
 |                           |                                                                                        | (obbligatorio)      |                  |
+|                           |                                                                                        |                     |                  |
+|                           |                                                                                        | **profile**         |                  |
+|                           |                                                                                        | (consigliato)       |                  |
+|                           |                                                                                        |                     |                  |
 |                           |                                                                                        | **offline_access**: |                  |
 |                           |                                                                                        | se specificato, l’OP|                  |
 |                           |                                                                                        | rilascerà oltre     |                  |

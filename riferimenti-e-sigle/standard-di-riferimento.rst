@@ -6,8 +6,11 @@ OpenID Connect, *International Government Assurance Profile (iGov) for
 OpenID Connect 1.0*, con la seguente personalizzazione:
 
 -  paragrafo 4,2 di openid-igov-openid-connect-1_0: Scope: viene
-   utilizzato solo lo scope "openid" e non "bio", "profile" e "doc" come
-   suggerito dal profilo iGov;
+   utilizzato sempre lo scope "openid" e viene consigliato l'uso
+   di "profile" per l'ottenimento del set esteso degli attributi utente.
+   Altri scopi possono essere ad esempio utilizzati per estendere
+   le finalità della richiesta di autorizzazione, come definito nello
+   standard OAuth2 sebbene questi non riguardino il profilo OIDC SPID;
 
 -  paragrafo 3,7 e 2,5 di openid-igov-openid-connect-1_0: I metadata
    degli attori sono distribuiti secondo le modalità definite
