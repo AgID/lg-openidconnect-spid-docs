@@ -41,7 +41,8 @@ OAuth 2.0 - Draft 03, paragrafo 3.2.1, “JWT Bearer Tokens”.
 |                       | token* restituito.    | valorizzato sempre    |
 |                       |                       | con **Bearer**        |
 +-----------------------+-----------------------+-----------------------+
-| **refresh_token**     | Il *refresh token*,   |                       |
+| **refresh_token**     | Il *refresh token*    |                       |
+|                       | (**opzionale**)       |                       |
 |                       | in formato JWT        |                       |
 |                       | firmato, consente di  |                       |
 |                       | chiamare nuovamente   |                       |
