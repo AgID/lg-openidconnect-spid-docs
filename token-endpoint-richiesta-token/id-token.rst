@@ -2,7 +2,7 @@ ID Token
 ========
 
 L’ID Token è un JSON Web Token (JWT) che contiene informazioni
-sull’utente che ha eseguito l’autenticazione. I Client devono eseguire
+sull’utente che ha eseguito l’autenticazione. I Relying Party (RP) devono eseguire
 la validazione dell’ID Token.
 
 **Esempio di ID Token:**
@@ -25,7 +25,7 @@ la validazione dell’ID Token.
 +-----------------------+-----------------------+-----------------------+
 | **Parametro**         | **Descrizione**       | **Validazione**       |
 +-----------------------+-----------------------+-----------------------+
-| **Iss**               | Identificatore        | Il client è tenuto a  |
+| **iss**               | Identificatore        | Il client è tenuto a  |
 |                       | dell’OP che lo        | verificare che questo |
 |                       | contraddistingue      | valore corrisponda    |
 |                       | univocamente nella    | all’OP chiamato.      |
@@ -34,7 +34,7 @@ la validazione dell’ID Token.
 |                       | Resource Locator      |                       |
 |                       | (URL).                |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Sub**               | Per il valore di      |                       |
+| **sub**               | Per il valore di      |                       |
 |                       | questo parametro fare |                       |
 |                       | riferimento allo      |                       |
 |                       | standard “OpenID      |                       |
@@ -43,12 +43,12 @@ la validazione dell’ID Token.
 |                       | “Pairwise Identifier  |                       |
 |                       | Algorithm”.           |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Aud**               | Contiene il client    | Il client è tenuto a  |
+| **aud**               | Contiene il client    | Il client è tenuto a  |
 |                       | ID.                   | verificare che questo |
 |                       |                       | valore corrisponda al |
 |                       |                       | proprio client ID.    |
 +-----------------------+-----------------------+-----------------------+
-| **Acr**               | Livello di            |                       |
+| **acr**               | Livello di            |                       |
 |                       | autenticazione        |                       |
 |                       | effettivo. Può essere |                       |
 |                       | uguale o superiore a  |                       |
@@ -69,11 +69,11 @@ la validazione dell’ID Token.
 |                       | **alg** nell’header   |                       |
 |                       | dell’ID Token.        |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Iat**               | Data/ora di emissione |                       |
+| **iat**               | Data/ora di emissione |                       |
 |                       | del token in formato  |                       |
 |                       | UTC.                  |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Nbf**               | Data/ora di inizio    || {                    |
+| **nbf**               | Data/ora di inizio    || {                    |
 |                       | validità del token in || userinfo: {...}      |
 |                       | formato UTC. Deve     || id_token: {          |
 |                       | corrispondere con il  || acr: {...},          |
@@ -84,14 +84,14 @@ la validazione dell’ID Token.
 |                       |                       || }                    |
 |                       |                       || }                    |
 +-----------------------+-----------------------+-----------------------+
-| **Exp**               | Data/ora di scadenza  |                       |
+| **exp**               | Data/ora di scadenza  |                       |
 |                       | del token in formato  |                       |
 |                       | UTC, secondo le       |                       |
 |                       | modalità definite     |                       |
 |                       | dall’Agenzia per      |                       |
 |                       | l’Italia Digitale.    |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Jti**               | Identificatore unico  |                       |
+| **jti**               | Identificatore unico  |                       |
 |                       | dell’ID Token che il  |                       |
 |                       | client più utilizzare |                       |
 |                       | per prevenirne il     |                       |
@@ -105,8 +105,8 @@ la validazione dell’ID Token.
 |                       | da una stringa        |                       |
 |                       | casuale.              |                       |
 +-----------------------+-----------------------+-----------------------+
-| **Nonce**             | Stringa casuale       | Il client è tenuto a  |
-|                       | generata dal Client   | verificare che        |
+| **nonce**             | Stringa casuale       | Il client è tenuto a  |
+|                       | generata dal RP       | verificare che        |
 |                       | per ciascuna sessione | coincida con quella   |
 |                       | utente ed inviata     | inviata               |
 |                       | nell’Authentication   | nell’Authentication   |

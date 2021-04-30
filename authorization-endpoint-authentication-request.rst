@@ -1,4 +1,4 @@
-Authorization Endpoint (Authentication Request) 
+Authorization Endpoint (Authentication Request)
 ================================================
 
 Per avviare il processo di autenticazione, il RP manda l’utente
@@ -27,28 +27,28 @@ definite dall’Agenzia per l’Italia Digitale.
 
 .. code-block:: json
 
- {                                                                   
-  client_id=https%3A%2F%2Frp.spid.agid.gov.it                   
-  code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80               
-  code_challenge_method=S256                                    
-  nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2                        
-  prompt=login                                                  
-  redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F 
-  response_type=code                                            
-  scope=openid                                                  
+ {
+  client_id=https%3A%2F%2Frp.spid.agid.gov.it
+  code_challenge=qWJlMe0xdbXrKxTm72EpH659bUxAxw80
+  code_challenge_method=S256
+  nonce=MBzGqyf9QytD28eupyWhSqMj78WNqpc2
+  prompt=login
+  redirect_uri=https%3A%2F%2Frp.spid.agid.gov.it%2Fcallback1%2F
+  response_type=code
+  scope=openid
   acr_values=https://www.spid.gov.it/SpidL1 https://www.spid.gov.it/SpidL2
-  claims={                                                      
-   "id_token":{                                                    
-    "nbf": { essential: true},                                      
-    "jti": { essential: true}                                      
-   },                                                                  
-   "userinfo":{                                                    
-    "https://attributes.spid.gov.it/name": null,                        
-    "https://attributes.spid.gov.it/familyName": null                   
-   },                                                                  
-  }                                                                   
- state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd                        
- }                                                                   
+  claims={
+   "id_token":{
+    "nbf": { essential: true},
+    "jti": { essential: true}
+   },
+   "userinfo":{
+    "https://attributes.spid.gov.it/name": null,
+    "https://attributes.spid.gov.it/familyName": null
+   },
+  }
+ state=fyZiOL9Lf2CeKuNT2JzxiLRDink0uPcd
+ }
 
 +-----------------+-----------------+-----------------+-----------------+
 | **Parametro**   | **Descrizione** | **Valori        |**Obbligatorio** |
@@ -158,7 +158,15 @@ definite dall’Agenzia per l’Italia Digitale.
 | **Scope**       | Lista degli     |**openid**        | SI             |
 |                 | scope           | (obbligatorio).  |                |
 |                 | richiesti.      |                  |                |
-|                 |                 |**offline_access**|                | 
+|                 |                 | **profile**      |                |
+|                 |                 | necessario per   |                |
+|                 |                 | ottenere la lista|                |
+|                 |                 | di tutti gli     |                |
+|                 |                 | attributi utente |                |
+|                 |                 | presso userinfo  |                |
+|                 |                 | endpoint.        |                |
+|                 |                 |                  |                |
+|                 |                 |**offline_access**|                |
 |                 |                 | se specificato,  |                |
 |                 |                 | l’OP rilascerà   |                |
 |                 |                 | oltre            |                |

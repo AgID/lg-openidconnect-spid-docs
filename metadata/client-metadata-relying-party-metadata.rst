@@ -64,10 +64,10 @@ con alcuni campi in aggiunta.
 |                                   | rimanderà l’utente allo specifico |
 |                                   | servizio.*                        |
 +-----------------------------------+-----------------------------------+
-| **jwks_uri**                      | Array contenente la chiave        |
-|                                   | pubblica in formato JSON Web Key  |
-|                                   | (JWK) e quindi composto dai       |
-|                                   | seguenti parametri:               |
+| **jwks**                          | Array contenente una o più chiavi |
+|                                   | pubbliche in formato JSON Web Key |
+|                                   | (JWK), quindi composto dai        |
+|                                   | seguenti claims:                  |
 |                                   |                                   |
 |                                   | -  *kty:* famiglia dell’algoritmo |
 |                                   |    crittografico utilizzato       |
@@ -84,6 +84,19 @@ con alcuni campi in aggiunta.
 |                                   | -  *n:* modulus (standard pem)    |
 |                                   |                                   |
 |                                   | -  *e:* esponente (standard pem). |
++-----------------------------------+-----------------------------------+
+| **jwks_uri**                      | URL del set di chiavi pubbliche   |
+|                                   | Web JSON (JWK)[RFC7517], per le   |
+|                                   | operazioni di firma e convalida   |
+|                                   | delle richieste firmate fatte al  |
+|                                   | token endpoint [RFC7523] e per la |
+|                                   | crittografia. L'uso di questo     |
+|                                   | parametro è preferito rispetto al |
+|                                   | parametro "jwks", perché consente |
+|                                   | una rotazione più semplice delle  |
+|                                   | chiavi. "Jwks_uri" e "jwks"       |
+|                                   | NON DEVONO essere entrambi        |
+|                                   | nella stessa richiesta o risposta.|
 +-----------------------------------+-----------------------------------+
 | **client_name**                   | Nome del RP da visualizzare nelle |
 |                                   | schermate di autenticazione e     |
@@ -113,9 +126,9 @@ con alcuni campi in aggiunta.
 **Riferimenti**
 
 +------------------------------------------------------------------------------+
-| https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata |                                                               
+| https://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata |
 +------------------------------------------------------------------------------+
-      
+
 .. forum_italia::
    :topic_id: 10916
    :scope: document

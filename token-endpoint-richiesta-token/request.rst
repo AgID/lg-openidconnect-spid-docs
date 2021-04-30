@@ -4,7 +4,10 @@ Request
 **Esempio di richiesta con authorization code (caso 1):**
 
 +-----------------------------------------------------------------------+
-|| *POST https://op.spid.agid.gov.it/token?*                            |
+||  *POST /token HTTP/1.1*                                              |
+||  Host: https://op.spid.agid.gov.it                                   |
+||  Content-Type: application/x-www-form-urlencoded                     |
+||                                                                      |
 || **client_id**\ =https%3A%2F%2Frp.spid.agid.gov.it&                   |
 || **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI  |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
@@ -19,7 +22,10 @@ Request
 **Esempio di richiesta con refresh token (caso 2):**
 
 +-----------------------------------------------------------------------+
-|| *POST https://op.spid.agid.gov.it/token?*                            |
+||  *POST /token HTTP/1.1*                                              |
+||  Host: https://op.spid.agid.gov.it                                   |
+||  Content-Type: application/x-www-form-urlencoded                     |
+||                                                                      |
 || **client_id=**\ https%3A%2F%2Frp.spid.agid.gov.it&                   |
 || **client_assertion**\ =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWI  |
 | iOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNQSUQiLCJhZG1pbiI6dHJ1ZX0.LVyRDPVJm0S9 |
@@ -127,7 +133,7 @@ Request
 | **grant_type**  | Tipo di         | Può assumere    | SI              |
 |                 | credenziale     | uno dei         |                 |
 |                 | presentata dal  | seguenti        |                 |
-|                 | Client per la   | valori:         |                 |
+|                 | RP per la       | valori:         |                 |
 |                 | richiesta       |                 |                 |
 |                 | corrente.       | **authorization |                 |
 |                 |                 | _code**         |                 |
